@@ -36,7 +36,7 @@ In part 1, my co-worker used a Pearson's Correlation Test, to measure the linear
 
 My coworker should include the outcomes of both the Leven's test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.
 
-## Alternative hypothesis (H A): At least two means are not equal (as in, just two could be different, or all of them could be different)
+### ONLY for onw way ANOVAAAA
 
 
 The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.
@@ -46,7 +46,7 @@ To confirm that there is homogeniety across the variances of urban land, atmosph
 These two additional statistics would confirm whether the one-way ANOVA was appropriate and whether the results can be trusted.
 
 ## Maybe:
-
+-f-statistic and effect size 
 Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs. urban land) have significantly different nitrogen loads.
 
 Effect size (e.g., η² or Cohen’s f) – The p-value only tells us that a difference exists, but not how large the difference is. Reporting effect size would help quantify the practical significance of the variation in nitrogen load across sources.
@@ -76,43 +76,56 @@ We found that there is a difference between average nitrogen load (kg year^-1^) 
 
 ### Skills you will demonstrate
 
-In this problem, you will demonstrate your ability to find, clean, summarize, and visualize a data set. You will use data from the Santa Barbara Coastal LTER on sea surface temperature in the Santa Barbara Channel.
-
-Note that the instructions do not include all the steps you need to do *on purpose*. You will need to use your skills in working backwards from a final product (the visualization given to you) to determine the steps to get there.
 
 ### Problem
 
-Navigate to the [SBC LTER's data catalog](https://sbclter.msi.ucsb.edu/data/catalog/). Find and download the dataset on sea surface temperature in the Santa Barbara Channel to your `data` folder. (Hint: the page on the data catalog is called "Sea Surface Temperature in SB channel".)
+```{r}
+#Set up Chunk 
+#Read in Packages 
+library(tidyverse)   # Includes ggplot2, dplyr, readr, tibble, etc.
+library(here)        # For reproducible file paths
 
-In your set up chunk, read in the data as an object called `sst`.
+# Data import & cleaning
+library(readxl)      # For reading Excel files
+library(janitor)     # For cleaning column names and tabulating
+
+# Table formatting
+library(flextable)   # For flexible, styled tables
+library(gt)   
+
+sst <- read_csv(here("Data", "SST_update2023.csv"))
+
+```
+
+
 
 #### a. Cleaning and summarizing (16 points)
 
 Create an object called `sst_clean` from `sst`. Clean and summarize the data such that you end up with a data frame like this:
 
-![](/assignments/images/final/slice-sample-example.png)
+```{r}
+sst_clean <- sst |> 
+  clean_names() |> 
+    mutate(
+    date = ymd(date),             
+    year = year(date),            
+    month = month(date)) |> 
+  
+  filter(year == c("2018", "2019", "2020", "2021", "2022", "2023")) |>
+   select(year, month, temp) |>
+   group_by(year, month) |> 
+  summarise(mean_monthly_sst = round((mean(temp, na.rm = TRUE)), 1)) |>  
+    mutate(year = as.factor(year)) |> #set year column as a factor
+    mutate(month = factor(month.abb[month], #set the month column to factor using the abbreviated month names
+                           levels = month.abb, #the levels of the ordinal factor are set my the month abbreviations
+                           ordered = TRUE)) |> 
+  ungroup() 
 
-with a structure like this:
+slice_sample(sst_clean, n = 5)  #display 5 random rows from sst_clean
+str(sst_clean) #display sst_clean data structure
+```
 
-![](/assignments/images/final/str-example.png)
 
-Use the pipe operator (`|>` or `%>%`) to string functions together. After every pipe, start a new line to use the next function. Include annotations for each function you use.
-
-When you are done with all your cleaning steps, display 5 rows from `sst_clean` using `slice_sample()` and the structure using `str()`.
-
-Show all code.
-
-::: {.callout-tip title="Consider using the `lubridate` package." collapse="true"}
-You may find it useful to use functions from the `lubridate` package (pre-loaded in `tidyverse`, so you don't have to install/read it in separately).
-
-Not sure where to start? Google the package and read about it.
-:::
-
-::: {.callout-tip title="Double check your code!" collapse="true"}
-When writing your cleaning and summarizing code, run your code after adding each function. Does your data frame look the way you'd expect?
-
-Additionally, **pay attention to the components in the figure.** What has to be true about your data frame in order for you to recreate this figure? (Hint: think about what years are displayed in the figure, and contrast that with the years in the data set.)
-:::
 
 #### b. Visualize the data (20 points)
 
