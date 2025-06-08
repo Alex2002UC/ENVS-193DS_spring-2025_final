@@ -37,7 +37,7 @@ In part 1, my co-worker used a Pearson's Correlation Test, to measure the linear
 My coworker should include the outcomes of both the Leven's test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.
 
 ### ONLY for onw way ANOVAAAA
-
+-f-statistic, signifigance level, post hoc test, effect size 
 
 The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.
 
@@ -46,8 +46,8 @@ To confirm that there is homogeniety across the variances of urban land, atmosph
 These two additional statistics would confirm whether the one-way ANOVA was appropriate and whether the results can be trusted.
 
 ## Maybe:
--f-statistic and effect size 
-Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs. urban land) have significantly different nitrogen loads.
+
+-f-statistic and effect size Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs. urban land) have significantly different nitrogen loads.
 
 Effect size (e.g., η² or Cohen’s f) – The p-value only tells us that a difference exists, but not how large the difference is. Reporting effect size would help quantify the practical significance of the variation in nitrogen load across sources.
 
@@ -61,21 +61,19 @@ Note that your co-worker didn't include any information about the test statistic
 
 > We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year^-1^) (p = 0.03).
 
-We found a statistically significant correlation between distance from headwater(km) and annual total nitrogen load(kg year^-1^) (Pearson’s r = correlation coefficient, p = 0.03, α = significance level]), suggesting that nitrogen load changes with distance downstream.
-
+We found a statistically significant correlation between distance from headwater(km) and annual total nitrogen load(kg year^-1^) (Pearson’s r = correlation coefficient, p = 0.03, α = significance level\]), suggesting that nitrogen load changes with distance downstream.
 
 In part 2 of the results section of the report, your co-worker has written:
 
 > We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
 
-We found that there is a difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, $\alpha = significance level).
+-should I include the size differences 
 
-
+We found that there is a difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, \$\alpha = significance level).
 
 ## Problem 2. Data visualization (36 points)
 
 ### Skills you will demonstrate
-
 
 ### Problem
 
@@ -92,12 +90,11 @@ library(janitor)     # For cleaning column names and tabulating
 # Table formatting
 library(flextable)   # For flexible, styled tables
 library(gt)   
+library(ggplot2)
 
 sst <- read_csv(here("Data", "SST_update2023.csv"))
 
 ```
-
-
 
 #### a. Cleaning and summarizing (16 points)
 
@@ -125,21 +122,43 @@ slice_sample(sst_clean, n = 5)  #display 5 random rows from sst_clean
 str(sst_clean) #display sst_clean data structure
 ```
 
-
-
 #### b. Visualize the data (20 points)
 
 Recreate this visualization:
 
-![](/assignments/images/final/SST.jpeg)
+```{r}
+
+ggplot(sst_clean, aes(x = month, y = mean_monthly_sst, color = year, group = year)) + # Begin ggplot with data and aesthetics mapping
+geom_line(size = 1) + # Adds lines to show monthly trends for each water year
+geom_point() + # Add points to represent individual data values for each month
+labs(
+x = "Month", #deterines x-axis name
+y = "Mean Monthly Sea Surface temperature (°C)", #y-axis name
+color = "Year") + #differentiates each water year by a different color
+    scale_color_manual(
+    values = c(
+      "2018" = "#c6dbef",
+      "2019" = "#9ecae1",
+      "2020" = "#6baed6",
+      "2021" = "#4292c6",
+      "2022" = "#2171b5",
+      "2023" = "#084594")) +
+
+theme_minimal(base_size = 14) + #changing themes
+theme(
+panel.background = element_blank(),
+panel.grid = element_blank(), #no grid
+    axis.ticks = element_line(color = "black"),
+    axis.line = element_line(color = "black"),
+plot.title = element_text(hjust = 0),
+legend.position = c(0.1, 0.7),
+legend.background = element_blank() #no legend
+)
+
+```
 
 In addition to displaying the correct subset of the data, the specific aesthetic components you need to recreate are:
 
--   the geometries (there are two)
--   the x-, y-axis, and legend text and labels
--   a color gradient in a single color (doesn't have to be blue, can be any other color) going from light --\> dark for 2018 --\> 2023
--   the legend position inside the panel
--   the panel border and background
 
 ## Problem 3. Data analysis (87 points)
 
@@ -256,20 +275,19 @@ Compare and contrast your affective visualization from Homework 3 and the explor
 
 -   How are the visualizations different from each other in the way you have represented your data?
 
-In my exploratory visualization for HW-2, I created a boxplot and line graph that only displayed the statistical aspects of my data, which at this point of the quarter, provided data for only one of my groups: School Day. While I focused a lot on graphical data representation for my data on HW-2, my affective visualization focused more on contextualizing the study and indicating certain data themes. Instead of visualizing my data graphically and statistically, I used art to convey different proportions of spoons and water to represent trends I noticed in the data, rather than representing actual data points. 
+In my exploratory visualization for HW-2, I created a boxplot and line graph that only displayed the statistical aspects of my data, which at this point of the quarter, provided data for only one of my groups: School Day. While I focused a lot on graphical data representation for my data on HW-2, my affective visualization focused more on contextualizing the study and indicating certain data themes. Instead of visualizing my data graphically and statistically, I used art to convey different proportions of spoons and water to represent trends I noticed in the data, rather than representing actual data points.
 
 -   What similarities do you see between all your visualizations?
 
-I observe that in both my HW-2 and my affective visualization, I attempted to convey the trends of my data in the context of multiple different variables:time spent cooking(min), number of ingredients used, and Status of day. I did not only focus on displaying the means of my data, but also portray how differently paired variables had unique outcomes outside of time spent cooking. In the end, all of these visualizations displayed the same data and overall theme. 
+I observe that in both my HW-2 and my affective visualization, I attempted to convey the trends of my data in the context of multiple different variables:time spent cooking(min), number of ingredients used, and Status of day. I did not only focus on displaying the means of my data, but also portray how differently paired variables had unique outcomes outside of time spent cooking. In the end, all of these visualizations displayed the same data and overall theme.
 
 -   What patterns (e.g. differences in means/counts/proportions/medians, trends through time, relationships between variables) do you see in each visualization? Are these different between visualizations? If so, why? If not, why not?
 
-With only four observations at the time of HW-2, my visualization lacked a lot of data, however, I did notice that it's a pattern in all my visualizations to focus on my "time spent cooking(min)" variable. However, in my affective visualization I made a unique pairing of varaibles: Number of dirtied dishes and Number of ingredients, which displays as number of ingredients increases, so does the number of dirty dishes. 
+With only four observations at the time of HW-2, my visualization lacked a lot of data, however, I did notice that it's a pattern in all my visualizations to focus on my "time spent cooking(min)" variable. However, in my affective visualization I made a unique pairing of varaibles: Number of dirtied dishes and Number of ingredients, which displays as number of ingredients increases, so does the number of dirty dishes.
 
 -   What kinds of feedback did you get during week 9 in workshop or from the instructors? How did you implement or try those suggestions? If you tried and kept those suggestions, explain how and why; if not, explain why not.
 
-Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my "Number of dishes used" variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefullt provide even more context to my future audience. 
-
+Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my "Number of dishes used" variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefullt provide even more context to my future audience.
 
 #### b. Sharing your affective visualization (25 points)
 
