@@ -157,20 +157,15 @@ legend.background = element_blank() #no legend
 
 ```
 
-In addition to displaying the correct subset of the data, the specific aesthetic components you need to recreate are:
 
 
 ## Problem 3. Data analysis (87 points)
 
 ### Skills you will demonstrate
 
-In this problem, you will demonstrate your ability to **understand a data set that someone else collected** and **identify and execute the appropriate statistical method, with all assumption checks**. Additionally, you will demonstrate your ability to **visualize and communicate about the results of your statistical test**.
-
-You will be working with the nest box occupancy dataset from Stojanovic, D., Owens, G., Young, C.M., Alves, F. and Heinsohn, R. 2021. "Do nest boxes breed the target species or its competitors? A case study of a critically endangered bird." *Restoration Ecology*. DOI: [10.1111/rec.13319](https://doi.org/10.1111/rec.13319)
-
-The data citation is: Stojanovic, Dejan et al. (2021). Do nest boxes breed the target species or its competitors? A case study of a critically endangered bird \[Dataset\]. Dryad. <https://doi.org/10.5061/dryad.83bk3j9sb>
-
-You will answer the following research questions:
+```{r}
+nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data 
+```
 
 1.  How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (*Lathamus discolor*) nest box occupancy?
 2.  Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?
@@ -179,23 +174,22 @@ You will answer the following research questions:
 
 ### Problem
 
-::: {.callout-tip title="Before doing the following parts..." collapse="true"}
-Read in your data in the set up chunk, storing it as a new object called `nest_boxes`.
 
-Do any exploring you need to do (exploratory visualizations, etc.) but **DO NOT include any code or output from your data exploration.**
-
-Note that you may have some cleaning/wrangling steps to do. Do them before running your models!
-
-Not sure how to write code but hide it and/or its output from the final rendered document? Check [here](https://quarto.org/docs/computations/execution-options.html) for options.
-:::
 
 #### a. Response variable (2 points)
 
 In 1-2 sentences, explain what the 1s and 0s mean in this data set biologically.
 
+
+The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row. 
+
+
 #### b. Purpose of study (2 points)
 
 The authors compare nest box occupancy between 3 species: Swift Parrots, Common Starlings, and Tree Martins. In 1-2 sentences, explain the main difference between Swift Parrots and the other two species in the context of this study.
+
+Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots. 
+
 
 #### c. Difference in "seasons" (2 points)
 
