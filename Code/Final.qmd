@@ -98,6 +98,7 @@ library(ggplot2)
 library(scales) # modifying axis labels
 library(ggeffects) # getting model predictions
 library(MuMIn) # model selection
+library(gtsummary)
 
 sst <- read_csv(here("Data", "SST_update2023.csv"))
 nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data 
@@ -309,33 +310,73 @@ AICc(model1,
 summary(model1)
 # reference level for water_treatment: Drought stressed
 # reference level for species: Lotus scoparius
+gtsummary::tbl_regression(model1, exponentiate = TRUE)
 ```
 
 The best model that predicts Swift Parrot nest box occupancy is Model 1 as determined by Akaike's Information Criterion (AIC), which includes both season and distance from forest edge as predictors and has the lowest AIC (F(215.53, 212) = 27.08, p < 0.05, $\alpha$ = 0.05).
 
 #### h. Visualize the model predictions (24 points)
+```{r}
 
--llok like the same one from paper
+model_prediction <- ggpredict(model1, 
+                          terms = c( "edge_distance [all]", "season"))
 
-Create a plot showing model predictions with 95% confidence intervals and the underlying data.
+ggplot(model_prediction, 
+       aes(x = x, y = predicted, color = group, fill = group)) + 
+         geom_point(size = 2, 
+                    alpha= 0.4,
+                    color = "black") + 
+         geom_ribbon(data = model_prediction, 
+                     aes(x = x, 
+                         y = predicted, 
+                         ymin = conf.low, 
+                         ymax = conf.high), 
+                    alpha = 0.05) + 
+         geom_line(data = model_prediction,
+                   aes(x = x, 
+                       y = predicted)) + 
+         scale_y_continuous(limits = c(0, 1), 
+                            breaks = c(0, 1)) + 
+  theme_minimal(base_size = 14) + #changing themes
+theme(
+panel.background = element_blank(),
+panel.grid = element_blank(), #no grid
+    axis.ticks = element_line(color = "black"),
+    axis.line = element_line(color = "black"),
+    legend.position = c(0.9, 0.6)) +
+  
+scale_fill_manual(values = c("2016" = "orange",
+                             "2019" = "green")) +
 
-Show and annotate all code. Show the output.
+scale_color_manual(values = c("2016" = "orange",
+                             "2019" = "green")) +
+  
+labs(
+  title = " Probability of Swift Parrot Occupation of Nest Boxes according to Season and Distance",
+  x = "Distance to forest edge (m)",
+  y = "Probability of box occupancy (%)")
 
-For full credit:
 
--   make sure the x- and y-axis labels are written in full
--   take out the gridlines
--   use colors that are different from the default
+```
+
+
 
 #### i. Write a caption for your figure. (7 points)
 
 Include a figure number, title, description of the figure, and data citation.
+
+***Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season*** Data collected by the Australian National University and from the "occdist.csv" package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor "distance to forest edge(m)"(n= 232). The ribbons represent the 95% confidence intervals around model 1's predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon. 
 
 #### j. Calculate model predictions (4 points)
 
 Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in `season`.
 
 Show and annotate all code. Display the output.
+```{r}
+
+
+```
+
 
 #### k. Interpret your results (16 points)
 
