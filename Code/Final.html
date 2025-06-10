@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alexa Andrade">
+<meta name="dcterms.date" content="2025-06-08">
+
+<title>Final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Final_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Final_files/libs/quarto-html/quarto.js"></script>
+<script src="Final_files/libs/quarto-html/popper.min.js"></script>
+<script src="Final_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Final_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Final_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Final_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Final_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Final_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" id="toc-link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" class="nav-link active" data-scroll-target="#link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final">link to Github repo:https://github.com/Alex2002UC/ENVS-193DS_spring-2025_final</a></li>
+  <li><a href="#problem-1.-research-writing-36-points" id="toc-problem-1.-research-writing-36-points" class="nav-link" data-scroll-target="#problem-1.-research-writing-36-points">Problem 1. Research writing (36 points)</a>
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem">Problem</a>
+  <ul>
+  <li><a href="#a.-transparent-statistical-methods-8-points" id="toc-a.-transparent-statistical-methods-8-points" class="nav-link" data-scroll-target="#a.-transparent-statistical-methods-8-points">a. Transparent statistical methods (8 points)</a></li>
+  <li><a href="#b.-more-information-needed-8-points" id="toc-b.-more-information-needed-8-points" class="nav-link" data-scroll-target="#b.-more-information-needed-8-points">b. More information needed (8 points)</a></li>
+  </ul></li>
+  <li><a href="#only-for-onw-way-anovaaaa" id="toc-only-for-onw-way-anovaaaa" class="nav-link" data-scroll-target="#only-for-onw-way-anovaaaa">ONLY for onw way ANOVAAAA</a></li>
+  </ul></li>
+  <li><a href="#maybe" id="toc-maybe" class="nav-link" data-scroll-target="#maybe">Maybe:</a>
+  <ul>
+  <li><a href="#c.-suggestions-for-rewriting-20-points" id="toc-c.-suggestions-for-rewriting-20-points" class="nav-link" data-scroll-target="#c.-suggestions-for-rewriting-20-points">c.&nbsp;Suggestions for rewriting (20 points)</a></li>
+  </ul></li>
+  <li><a href="#problem-2.-data-visualization-36-points" id="toc-problem-2.-data-visualization-36-points" class="nav-link" data-scroll-target="#problem-2.-data-visualization-36-points">Problem 2. Data visualization (36 points)</a>
+  <ul>
+  <li><a href="#skills-you-will-demonstrate" id="toc-skills-you-will-demonstrate" class="nav-link" data-scroll-target="#skills-you-will-demonstrate">Skills you will demonstrate</a></li>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem</a>
+  <ul>
+  <li><a href="#a.-cleaning-and-summarizing-16-points" id="toc-a.-cleaning-and-summarizing-16-points" class="nav-link" data-scroll-target="#a.-cleaning-and-summarizing-16-points">a. Cleaning and summarizing (16 points)</a></li>
+  <li><a href="#b.-visualize-the-data-20-points" id="toc-b.-visualize-the-data-20-points" class="nav-link" data-scroll-target="#b.-visualize-the-data-20-points">b. Visualize the data (20 points)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#problem-3.-data-analysis-87-points" id="toc-problem-3.-data-analysis-87-points" class="nav-link" data-scroll-target="#problem-3.-data-analysis-87-points">Problem 3. Data analysis (87 points)</a>
+  <ul>
+  <li><a href="#skills-you-will-demonstrate-1" id="toc-skills-you-will-demonstrate-1" class="nav-link" data-scroll-target="#skills-you-will-demonstrate-1">Skills you will demonstrate</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem</a>
+  <ul>
+  <li><a href="#a.-response-variable-2-points" id="toc-a.-response-variable-2-points" class="nav-link" data-scroll-target="#a.-response-variable-2-points">a. Response variable (2 points)</a></li>
+  <li><a href="#b.-purpose-of-study-2-points" id="toc-b.-purpose-of-study-2-points" class="nav-link" data-scroll-target="#b.-purpose-of-study-2-points">b. Purpose of study (2 points)</a></li>
+  <li><a href="#c.-difference-in-seasons-2-points" id="toc-c.-difference-in-seasons-2-points" class="nav-link" data-scroll-target="#c.-difference-in-seasons-2-points">c.&nbsp;Difference in “seasons” (2 points)</a></li>
+  <li><a href="#d.-table-of-models-10-points" id="toc-d.-table-of-models-10-points" class="nav-link" data-scroll-target="#d.-table-of-models-10-points">d.&nbsp;Table of models (10 points)</a></li>
+  <li><a href="#e.-run-the-models-8-points" id="toc-e.-run-the-models-8-points" class="nav-link" data-scroll-target="#e.-run-the-models-8-points">e. Run the models (8 points)</a></li>
+  <li><a href="#f.-check-the-diagnostics-6-points" id="toc-f.-check-the-diagnostics-6-points" class="nav-link" data-scroll-target="#f.-check-the-diagnostics-6-points">f.&nbsp;Check the diagnostics (6 points)</a></li>
+  <li><a href="#g.-select-the-best-model-6-points" id="toc-g.-select-the-best-model-6-points" class="nav-link" data-scroll-target="#g.-select-the-best-model-6-points">g. Select the best model (6 points)</a></li>
+  <li><a href="#h.-visualize-the-model-predictions-24-points" id="toc-h.-visualize-the-model-predictions-24-points" class="nav-link" data-scroll-target="#h.-visualize-the-model-predictions-24-points">h. Visualize the model predictions (24 points)</a></li>
+  <li><a href="#i.-write-a-caption-for-your-figure.-7-points" id="toc-i.-write-a-caption-for-your-figure.-7-points" class="nav-link" data-scroll-target="#i.-write-a-caption-for-your-figure.-7-points">i. Write a caption for your figure. (7 points)</a></li>
+  <li><a href="#j.-calculate-model-predictions-4-points" id="toc-j.-calculate-model-predictions-4-points" class="nav-link" data-scroll-target="#j.-calculate-model-predictions-4-points">j. Calculate model predictions (4 points)</a></li>
+  <li><a href="#k.-interpret-your-results-16-points" id="toc-k.-interpret-your-results-16-points" class="nav-link" data-scroll-target="#k.-interpret-your-results-16-points">k. Interpret your results (16 points)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#problem-4.-affective-and-exploratory-visualizations-45-points" id="toc-problem-4.-affective-and-exploratory-visualizations-45-points" class="nav-link" data-scroll-target="#problem-4.-affective-and-exploratory-visualizations-45-points">Problem 4. Affective and exploratory visualizations (45 points)</a>
+  <ul>
+  <li><a href="#skills-you-will-demonstrate-2" id="toc-skills-you-will-demonstrate-2" class="nav-link" data-scroll-target="#skills-you-will-demonstrate-2">Skills you will demonstrate</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a>
+  <ul>
+  <li><a href="#a.-comparing-visualizations-20-points" id="toc-a.-comparing-visualizations-20-points" class="nav-link" data-scroll-target="#a.-comparing-visualizations-20-points">a. Comparing visualizations (20 points)</a></li>
+  <li><a href="#b.-sharing-your-affective-visualization-25-points" id="toc-b.-sharing-your-affective-visualization-25-points" class="nav-link" data-scroll-target="#b.-sharing-your-affective-visualization-25-points">b. Sharing your affective visualization (25 points)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alexa Andrade </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 8, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" class="level3">
+<h3 class="anchored" data-anchor-id="link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final">link to Github repo:https://github.com/Alex2002UC/ENVS-193DS_spring-2025_final</h3>
+</section>
+<section id="problem-1.-research-writing-36-points" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1.-research-writing-36-points">Problem 1. Research writing (36 points)</h2>
+<section id="problem" class="level3">
+<h3 class="anchored" data-anchor-id="problem">Problem</h3>
+<p>You’re working on a research team trying to understand how agricultural runoff in the San Joaquin River Delta influences total nitrogen load (measured in kilograms per year, kg year<sup>-1</sup>). Your co-worker runs some analyses and writes up a report, giving it to you to review. In part 1 of the results section of the report, your co-worker has written:</p>
+<blockquote class="blockquote">
+<p>We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year<sup>-1</sup>) (p = 0.03).</p>
+</blockquote>
+<p>In part 2 of the results section of the report, your co-worker has written:</p>
+<blockquote class="blockquote">
+<p>We rejected the null hypothesis that there is no difference in average nitrogen load (kg year<sup>-1</sup>) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).</p>
+</blockquote>
+<p>It’s great that this report is coming together, but you think they can improve on what they’ve written and make it more understandable to a non-statistical audience.</p>
+<section id="a.-transparent-statistical-methods-8-points" class="level4">
+<h4 class="anchored" data-anchor-id="a.-transparent-statistical-methods-8-points">a. Transparent statistical methods (8 points)</h4>
+<p>What statistical tests did your co-worker use? Clearly connect the test to the part that you are addressing (e.g.&nbsp;“In part 1, they used _______. In part 2, they used _______.”).</p>
+<p>In part 1, my co-worker used a Pearson’s Correlation Test, to measure the linear relationship between distance to headwater(km) and annual total nitrogen load(kg year-1) In part 2, they used a one-way ANOVA, to test weither the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands.</p>
+</section>
+<section id="b.-more-information-needed-8-points" class="level4">
+<h4 class="anchored" data-anchor-id="b.-more-information-needed-8-points">b. More information needed (8 points)</h4>
+<p>My coworker should include the outcomes of both the Leven’s test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.</p>
+</section>
+</section>
+<section id="only-for-onw-way-anovaaaa" class="level3">
+<h3 class="anchored" data-anchor-id="only-for-onw-way-anovaaaa">ONLY for onw way ANOVAAAA</h3>
+<p>-f-statistic, signifigance level, post hoc test, effect size</p>
+<p>The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.</p>
+<p>To confirm that there is homogeniety across the variances of urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. Levene’s test compares the variance of nitrogen load(kg year⁻¹) among the different sources. If the output of the test is p &lt; 0.05, we would reject the null hypothesis that there is equal varaiances between groups, however we wouldn’t know which group comaparison doesn’t have equal variance. The outcome could determine if we need more tests, or if a one-way ANOVA would not be appropraite and a different test needs to be used.</p>
+<p>These two additional statistics would confirm whether the one-way ANOVA was appropriate and whether the results can be trusted.</p>
+</section>
+</section>
+<section id="maybe" class="level2">
+<h2 class="anchored" data-anchor-id="maybe">Maybe:</h2>
+<p>-f-statistic and effect size Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs.&nbsp;urban land) have significantly different nitrogen loads.</p>
+<p>Effect size (e.g., η² or Cohen’s f) – The p-value only tells us that a difference exists, but not how large the difference is. Reporting effect size would help quantify the practical significance of the variation in nitrogen load across sources.</p>
+<section id="c.-suggestions-for-rewriting-20-points" class="level4">
+<h4 class="anchored" data-anchor-id="c.-suggestions-for-rewriting-20-points">c.&nbsp;Suggestions for rewriting (20 points)</h4>
+<p>In 1-3 sentences, <em>write new research statements</em> to include relevant components from parts a-b and a full test summary in parentheses to be transparent about the statistical method.</p>
+<p>Be sure that your rewritten statements clearly delineate the <em>biological narrative</em> from the <em>statistical summary</em>. See lecture and workshop for examples of writing.</p>
+<p>Note that your co-worker didn’t include any information about the test statistic, distribution, etc., and that you only know the p-value. For any part that you do not know, list that part with text. For example, you could write something like: “… <strong>r = correlation coefficient</strong>, p = 0.03, <span class="math inline">\(\alpha\)</span> = significance level …”</p>
+<blockquote class="blockquote">
+<p>We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year<sup>-1</sup>) (p = 0.03).</p>
+</blockquote>
+<p>We found a statistically significant correlation between distance from headwater(km) and annual total nitrogen load(kg year<sup>-1</sup>) (Pearson’s r = correlation coefficient, p = 0.03, α = significance level]), suggesting that nitrogen load changes with distance downstream.</p>
+<p>In part 2 of the results section of the report, your co-worker has written:</p>
+<blockquote class="blockquote">
+<p>We rejected the null hypothesis that there is no difference in average nitrogen load (kg year<sup>-1</sup>) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).</p>
+</blockquote>
+<p>-should I include the size differences</p>
+<p>We found that there is a difference between average nitrogen load (kg year<sup>-1</sup>) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, $= significance level).</p>
+</section>
+</section>
+<section id="problem-2.-data-visualization-36-points" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2.-data-visualization-36-points">Problem 2. Data visualization (36 points)</h2>
+<section id="skills-you-will-demonstrate" class="level3">
+<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate">Skills you will demonstrate</h3>
+</section>
+<section id="problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1">Problem</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Set up Chunk </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in Packages </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)   <span class="co"># Includes ggplot2, dplyr, readr, tibble, etc.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)        <span class="co"># For reproducible file paths</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Data import &amp; cleaning</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)      <span class="co"># For reading Excel files</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)     <span class="co"># For cleaning column names and tabulating</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Table formatting</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)   <span class="co"># For flexible, styled tables</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)   </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>sst <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"SST_update2023.csv"</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>nest_boxes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"occdist.csv"</span>)) <span class="co">#read in my data </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="a.-cleaning-and-summarizing-16-points" class="level4">
+<h4 class="anchored" data-anchor-id="a.-cleaning-and-summarizing-16-points">a. Cleaning and summarizing (16 points)</h4>
+<p>Create an object called <code>sst_clean</code> from <code>sst</code>. Clean and summarize the data such that you end up with a data frame like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sst_clean <span class="ot">&lt;-</span> sst <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">ymd</span>(date),             </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">year</span>(date),            </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="fu">c</span>(<span class="st">"2018"</span>, <span class="st">"2019"</span>, <span class="st">"2020"</span>, <span class="st">"2021"</span>, <span class="st">"2022"</span>, <span class="st">"2023"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(year, month, temp) <span class="sc">|&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(year, month) <span class="sc">|&gt;</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_monthly_sst =</span> <span class="fu">round</span>((<span class="fu">mean</span>(temp, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="dv">1</span>)) <span class="sc">|&gt;</span>  </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">|&gt;</span> <span class="co">#set year column as a factor</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">factor</span>(month.abb[month], <span class="co">#set the month column to factor using the abbreviated month names</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> month.abb, <span class="co">#the levels of the ordinal factor are set my the month abbreviations</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                           <span class="at">ordered =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_sample</span>(sst_clean, <span class="at">n =</span> <span class="dv">5</span>)  <span class="co">#display 5 random rows from sst_clean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  year  month mean_monthly_sst
+  &lt;fct&gt; &lt;ord&gt;            &lt;dbl&gt;
+1 2023  May               14.3
+2 2021  Jul               17.6
+3 2022  Jun               16.2
+4 2021  Apr               13.1
+5 2021  Nov               15.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sst_clean) <span class="co">#display sst_clean data structure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [72 × 3] (S3: tbl_df/tbl/data.frame)
+ $ year            : Factor w/ 6 levels "2018","2019",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ month           : Ord.factor w/ 12 levels "Jan"&lt;"Feb"&lt;"Mar"&lt;..: 1 2 3 4 5 6 7 8 9 10 ...
+ $ mean_monthly_sst: num [1:72] 15.1 14.3 13.5 12.8 13.6 15.5 18.2 19.6 18.2 18.4 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="b.-visualize-the-data-20-points" class="level4">
+<h4 class="anchored" data-anchor-id="b.-visualize-the-data-20-points">b. Visualize the data (20 points)</h4>
+<p>Recreate this visualization:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sst_clean, <span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> mean_monthly_sst, <span class="at">color =</span> year, <span class="at">group =</span> year)) <span class="sc">+</span> <span class="co"># Begin ggplot with data and aesthetics mapping</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="co"># Adds lines to show monthly trends for each water year</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># Add points to represent individual data values for each month</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"Month"</span>, <span class="co">#deterines x-axis name</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Mean Monthly Sea Surface temperature (°C)"</span>, <span class="co">#y-axis name</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">color =</span> <span class="st">"Year"</span>) <span class="sc">+</span> <span class="co">#differentiates each water year by a different color</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2018"</span> <span class="ot">=</span> <span class="st">"#c6dbef"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"#9ecae1"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2020"</span> <span class="ot">=</span> <span class="st">"#6baed6"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2021"</span> <span class="ot">=</span> <span class="st">"#4292c6"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2022"</span> <span class="ot">=</span> <span class="st">"#2171b5"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2023"</span> <span class="ot">=</span> <span class="st">"#084594"</span>)) <span class="sc">+</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing themes</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#no grid</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.7</span>),</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">legend.background =</span> <span class="fu">element_blank</span>() <span class="co">#no legend</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="problem-3.-data-analysis-87-points" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3.-data-analysis-87-points">Problem 3. Data analysis (87 points)</h2>
+<section id="skills-you-will-demonstrate-1" class="level3">
+<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate-1">Skills you will demonstrate</h3>
+<ol type="1">
+<li>How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (<em>Lathamus discolor</em>) nest box occupancy?</li>
+<li>Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?</li>
+</ol>
+<p><strong>READ THE INTRODUCTION AND METHODS BEFORE YOU START.</strong></p>
+</section>
+<section id="problem-2" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2">Problem</h3>
+<section id="a.-response-variable-2-points" class="level4">
+<h4 class="anchored" data-anchor-id="a.-response-variable-2-points">a. Response variable (2 points)</h4>
+<p>In 1-2 sentences, explain what the 1s and 0s mean in this data set biologically.</p>
+<p>The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row.</p>
+</section>
+<section id="b.-purpose-of-study-2-points" class="level4">
+<h4 class="anchored" data-anchor-id="b.-purpose-of-study-2-points">b. Purpose of study (2 points)</h4>
+<p>The authors compare nest box occupancy between 3 species: Swift Parrots, Common Starlings, and Tree Martins. In 1-2 sentences, explain the main difference between Swift Parrots and the other two species in the context of this study.</p>
+<p>Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.</p>
+</section>
+<section id="c.-difference-in-seasons-2-points" class="level4">
+<h4 class="anchored" data-anchor-id="c.-difference-in-seasons-2-points">c.&nbsp;Difference in “seasons” (2 points)</h4>
+<p>The authors compare two years (that they refer to as “seasons”). In 1-2 sentences, define what those years/seasons are, and explain how they differ in the context of this study.</p>
+<p>The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.</p>
+</section>
+<section id="d.-table-of-models-10-points" class="level4">
+<h4 class="anchored" data-anchor-id="d.-table-of-models-10-points">d.&nbsp;Table of models (10 points)</h4>
+<p>Make a table of all the models you will need to run. You will run 4 models: a null model, a saturated model, and two other models with different combinations of predictors.</p>
+<p>Stuck on how to create a table? See workshop 8 for an example.</p>
+<p>Your table should have 4 columns: (1) model number, (2) season, (3) distance to forest edge, and (4) model description.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nest_boxes_clean <span class="ot">&lt;-</span> nest_boxes <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(box_occupant <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"common starling"</span>, <span class="st">"swift parrot"</span>, <span class="st">"tree martin"</span>))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">####HIDEEEE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<table class="caption-top table">
+<caption>Table of Models</caption>
+<thead>
+<tr class="header">
+<th>Model Number</th>
+<th>Season</th>
+<th>Distance to forest edge</th>
+<th>Model Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="e.-run-the-models-8-points" class="level4">
+<h4 class="anchored" data-anchor-id="e.-run-the-models-8-points">e. Run the models (8 points)</h4>
+<p>Write your code to run all your models. Do not display any output.</p>
+</section>
+<section id="f.-check-the-diagnostics-6-points" class="level4">
+<h4 class="anchored" data-anchor-id="f.-check-the-diagnostics-6-points">f.&nbsp;Check the diagnostics (6 points)</h4>
+<p>Check your diagnostics for all models using simulated residuals from the <code>DHARMa</code> package.</p>
+<p>Display the diagnostic plots for each model.</p>
+</section>
+<section id="g.-select-the-best-model-6-points" class="level4">
+<h4 class="anchored" data-anchor-id="g.-select-the-best-model-6-points">g. Select the best model (6 points)</h4>
+<p>Using Akaike’s Information Criterion (AIC) from the <code>MuMIn</code> package, choose the best model.</p>
+<p>In text, write what the best model was (i.e.&nbsp;“The best model as determined by Akaike’s Information Criterion (AIC)…”).</p>
+<p><strong>Use the predictors and the response variable to describe the model</strong>, not the model number that you assigned.</p>
+</section>
+<section id="h.-visualize-the-model-predictions-24-points" class="level4">
+<h4 class="anchored" data-anchor-id="h.-visualize-the-model-predictions-24-points">h. Visualize the model predictions (24 points)</h4>
+<p>Create a plot showing model predictions with 95% confidence intervals and the underlying data.</p>
+<p>Show and annotate all code. Show the output.</p>
+<p>For full credit:</p>
+<ul>
+<li>make sure the x- and y-axis labels are written in full</li>
+<li>take out the gridlines</li>
+<li>use colors that are different from the default</li>
+</ul>
+</section>
+<section id="i.-write-a-caption-for-your-figure.-7-points" class="level4">
+<h4 class="anchored" data-anchor-id="i.-write-a-caption-for-your-figure.-7-points">i. Write a caption for your figure. (7 points)</h4>
+<p>Include a figure number, title, description of the figure, and data citation.</p>
+</section>
+<section id="j.-calculate-model-predictions-4-points" class="level4">
+<h4 class="anchored" data-anchor-id="j.-calculate-model-predictions-4-points">j. Calculate model predictions (4 points)</h4>
+<p>Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in <code>season</code>.</p>
+<p>Show and annotate all code. Display the output.</p>
+</section>
+<section id="k.-interpret-your-results-16-points" class="level4">
+<h4 class="anchored" data-anchor-id="k.-interpret-your-results-16-points">k. Interpret your results (16 points)</h4>
+<p>Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j. Your summary should include your interpretation of:</p>
+<ul>
+<li>the predicted probability of occupancy at the forest edge (0 m) and farther away from the forest edge (900 m) between seasons</li>
+<li>the relationship between distance from forest edge and probability of occupancy</li>
+<li>the biology behind the trends you found - what explains the relationship between distance from forest edge and probability of Swift Parrot nest box occupancy?</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="READ THE PAPER!">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+READ THE PAPER!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To understand the biology behind the trends you found, you need to read the paper and look at the figures. For which species do you see the <em>opposite</em> relationship between distance to forest edge and probability of occupancy?</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="problem-4.-affective-and-exploratory-visualizations-45-points" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4.-affective-and-exploratory-visualizations-45-points">Problem 4. Affective and exploratory visualizations (45 points)</h2>
+<section id="skills-you-will-demonstrate-2" class="level3">
+<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate-2">Skills you will demonstrate</h3>
+<p>In this problem, you will demonstrate your ability to <strong>communicate about your visualization and give feedback to others.</strong> You will also demonstrate your ability to <strong>design and execute an appropriate statistical analysis for your data</strong>.</p>
+</section>
+<section id="problem-4" class="level3">
+<h3 class="anchored" data-anchor-id="problem-4">Problem 4</h3>
+<section id="a.-comparing-visualizations-20-points" class="level4">
+<h4 class="anchored" data-anchor-id="a.-comparing-visualizations-20-points">a. Comparing visualizations (20 points)</h4>
+<p>Compare and contrast your affective visualization from Homework 3 and the exploratory visualizations you made for Homework 2. In 1-3 sentences each, explain:</p>
+<ul>
+<li>How are the visualizations different from each other in the way you have represented your data?</li>
+</ul>
+<p>In my exploratory visualization for HW-2, I created a boxplot and line graph that only displayed the statistical aspects of my data, which at this point of the quarter, provided data for only one of my groups: School Day. While I focused a lot on graphical data representation for my data on HW-2, my affective visualization focused more on contextualizing the study and indicating certain data themes. Instead of visualizing my data graphically and statistically, I used art to convey different proportions of spoons and water to represent trends I noticed in the data, rather than representing actual data points.</p>
+<ul>
+<li>What similarities do you see between all your visualizations?</li>
+</ul>
+<p>I observe that in both my HW-2 and my affective visualization, I attempted to convey the trends of my data in the context of multiple different variables:time spent cooking(min), number of ingredients used, and Status of day. I did not only focus on displaying the means of my data, but also portray how differently paired variables had unique outcomes outside of time spent cooking. In the end, all of these visualizations displayed the same data and overall theme.</p>
+<ul>
+<li>What patterns (e.g.&nbsp;differences in means/counts/proportions/medians, trends through time, relationships between variables) do you see in each visualization? Are these different between visualizations? If so, why? If not, why not?</li>
+</ul>
+<p>With only four observations at the time of HW-2, my visualization lacked a lot of data, however, I did notice that it’s a pattern in all my visualizations to focus on my “time spent cooking(min)” variable. However, in my affective visualization I made a unique pairing of varaibles: Number of dirtied dishes and Number of ingredients, which displays as number of ingredients increases, so does the number of dirty dishes.</p>
+<ul>
+<li>What kinds of feedback did you get during week 9 in workshop or from the instructors? How did you implement or try those suggestions? If you tried and kept those suggestions, explain how and why; if not, explain why not.</li>
+</ul>
+<p>Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my “Number of dishes used” variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefullt provide even more context to my future audience.</p>
+</section>
+<section id="b.-sharing-your-affective-visualization-25-points" class="level4">
+<h4 class="anchored" data-anchor-id="b.-sharing-your-affective-visualization-25-points">b. Sharing your affective visualization (25 points)</h4>
+<p>This is a component you will complete in workshop during week 10. <strong>We will be taking attendance that day. If you attend class and complete the activity, you will receive full credit for this section.</strong></p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

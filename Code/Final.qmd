@@ -1,9 +1,10 @@
 ---
 title: "Final"
 author: "Alexa Andrade"
-format: html
 date: 6/08/25
 editor: visual
+format:
+  html:
     message: false
     warning: false
     toc: true
@@ -37,7 +38,8 @@ In part 1, my co-worker used a Pearson's Correlation Test, to measure the linear
 My coworker should include the outcomes of both the Leven's test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.
 
 ### ONLY for onw way ANOVAAAA
--f-statistic, signifigance level, post hoc test, effect size 
+
+-f-statistic, signifigance level, post hoc test, effect size
 
 The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.
 
@@ -67,7 +69,7 @@ In part 2 of the results section of the report, your co-worker has written:
 
 > We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
 
--should I include the size differences 
+-should I include the size differences
 
 We found that there is a difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, \$\alpha = significance level).
 
@@ -92,7 +94,13 @@ library(flextable)   # For flexible, styled tables
 library(gt)   
 library(ggplot2)
 
+
+library(scales) # modifying axis labels
+library(ggeffects) # getting model predictions
+library(MuMIn) # model selection
+
 sst <- read_csv(here("Data", "SST_update2023.csv"))
+nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data 
 
 ```
 
@@ -157,15 +165,9 @@ legend.background = element_blank() #no legend
 
 ```
 
-
-
 ## Problem 3. Data analysis (87 points)
 
 ### Skills you will demonstrate
-
-```{r}
-nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data 
-```
 
 1.  How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (*Lathamus discolor*) nest box occupancy?
 2.  Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?
@@ -174,26 +176,23 @@ nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data
 
 ### Problem
 
-
-
 #### a. Response variable (2 points)
 
 In 1-2 sentences, explain what the 1s and 0s mean in this data set biologically.
 
-
-The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row. 
-
+The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row.
 
 #### b. Purpose of study (2 points)
 
 The authors compare nest box occupancy between 3 species: Swift Parrots, Common Starlings, and Tree Martins. In 1-2 sentences, explain the main difference between Swift Parrots and the other two species in the context of this study.
 
-Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots. 
-
+Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.
 
 #### c. Difference in "seasons" (2 points)
 
 The authors compare two years (that they refer to as "seasons"). In 1-2 sentences, define what those years/seasons are, and explain how they differ in the context of this study.
+
+The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.
 
 #### d. Table of models (10 points)
 
@@ -203,15 +202,91 @@ Stuck on how to create a table? See workshop 8 for an example.
 
 Your table should have 4 columns: (1) model number, (2) season, (3) distance to forest edge, and (4) model description.
 
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+nest_boxes_clean <- nest_boxes |> 
+  clean_names() |> 
+  filter(box_occupant %in% c("common starling", "swift parrot", "tree martin")) |>  
+mutate(season = as_factor(season))
+ 
+```
+
+| Model Number | Season | Distance to forest edge | Model Description |
+|------------------|------------------|------------------|-------------------|
+| 0 |  |  | no predictors( null model) |
+| 1 | X | X | Year + Distance(saturated model) |
+| 2 | X |  | Year |
+| 3 |  | X | Distance from edge |
+
+: Table of Models
+
 #### e. Run the models (8 points)
 
-Write your code to run all your models. Do not display any output.
+```{r}
+
+# model 0: null model
+model0 <- glm(
+  sp ~ 1, # formula
+  data = nest_boxes_clean, # data frame
+  family = binomial()
+)
+
+# model 1: all predictors
+model1 <- glm(
+  sp ~ season + edge_distance, # formula
+  data = nest_boxes_clean, # data frame
+  family = binomial()
+)
+
+# model 2: SLA and water treatment
+model2 <- glm(
+  sp ~ season,
+  data = nest_boxes_clean,
+  family = binomial()
+)
+
+# model 3: SLA and species
+model3 <- glm(
+  sp ~ edge_distance,
+  data = nest_boxes_clean,
+  family = binomial()
+)
+
+```
 
 #### f. Check the diagnostics (6 points)
 
 Check your diagnostics for all models using simulated residuals from the `DHARMa` package.
 
 Display the diagnostic plots for each model.
+
+```{r}
+
+
+
+plot(model0)
+plot(model1)
+plot(model2)
+plot(model3)
+
+```
+
+```{r}
+
+# Set up the 2x2 plot grid before plotting
+par(mfrow = c(2, 2))
+
+# Plot DHARMa residual diagnostics for each model
+Model0 <- plot(simulateResiduals(model0))
+Model1 <- plot(simulateResiduals(model1))
+Model3 <- plot(simulateResiduals(model2))
+Model4 <- plot(simulateResiduals(model3))
+
+```
 
 #### g. Select the best model (6 points)
 
@@ -221,7 +296,26 @@ In text, write what the best model was (i.e. "The best model as determined by Ak
 
 **Use the predictors and the response variable to describe the model**, not the model number that you assigned.
 
+```{r model-selection}
+AICc(model1,
+     model2,
+     model3,
+     model0) |> 
+  # arranging output in descending order of AIC
+  arrange(AICc)
+```
+
+```{r model-summary}
+summary(model1)
+# reference level for water_treatment: Drought stressed
+# reference level for species: Lotus scoparius
+```
+
+The best model that predicts Swift Parrot nest box occupancy is Model 1 as determined by Akaike's Information Criterion (AIC), which includes both season and distance from forest edge as predictors and has the lowest AIC (F(215.53, 212) = 27.08, p < 0.05, $\alpha$ = 0.05).
+
 #### h. Visualize the model predictions (24 points)
+
+-llok like the same one from paper
 
 Create a plot showing model predictions with 95% confidence intervals and the underlying data.
 
