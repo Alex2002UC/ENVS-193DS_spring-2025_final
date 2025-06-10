@@ -3,10 +3,14 @@ title: "Final"
 author: "Alexa Andrade"
 date: 6/08/25
 editor: visual
+
+execute:
+  warning: false
+  error: false
+  message: false
+
 format:
   html:
-    message: false
-    warning: false
     toc: true
     toc-depth: 5
 ---
@@ -17,41 +21,15 @@ format:
 
 ### Problem
 
-You're working on a research team trying to understand how agricultural runoff in the San Joaquin River Delta influences total nitrogen load (measured in kilograms per year, kg year^-1^). Your co-worker runs some analyses and writes up a report, giving it to you to review. In part 1 of the results section of the report, your co-worker has written:
-
-> We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year^-1^) (p = 0.03).
-
-In part 2 of the results section of the report, your co-worker has written:
-
-> We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
-
-It's great that this report is coming together, but you think they can improve on what they've written and make it more understandable to a non-statistical audience.
-
 #### a. Transparent statistical methods (8 points)
 
 What statistical tests did your co-worker use? Clearly connect the test to the part that you are addressing (e.g. "In part 1, they used \_\_\_\_\_\_\_. In part 2, they used \_\_\_\_\_\_\_.").
 
-In part 1, my co-worker used a Pearson's Correlation Test, to measure the linear relationship between distance to headwater(km) and annual total nitrogen load(kg year-1) In part 2, they used a one-way ANOVA, to test weither the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands.
+In part 1, my co-worker used a Pearson's Correlation (r) Test, to measure the linear relationship between distance to head water(km) and annual total nitrogen load(kg year-1) In part 2, they used a one-way ANOVA, to test whether the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands.
 
 #### b. More information needed (8 points)
 
-My coworker should include the outcomes of both the Leven's test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.
-
-### ONLY for onw way ANOVAAAA
-
--f-statistic, signifigance level, post hoc test, effect size
-
-The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.
-
-To confirm that there is homogeniety across the variances of urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. Levene's test compares the variance of nitrogen load(kg year⁻¹) among the different sources. If the output of the test is p \< 0.05, we would reject the null hypothesis that there is equal varaiances between groups, however we wouldn't know which group comaparison doesn't have equal variance. The outcome could determine if we need more tests, or if a one-way ANOVA would not be appropraite and a different test needs to be used.
-
-These two additional statistics would confirm whether the one-way ANOVA was appropriate and whether the results can be trusted.
-
-## Maybe:
-
--f-statistic and effect size Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs. urban land) have significantly different nitrogen loads.
-
-Effect size (e.g., η² or Cohen’s f) – The p-value only tells us that a difference exists, but not how large the difference is. Reporting effect size would help quantify the practical significance of the variation in nitrogen load across sources.
+My coworker should include the effect size and complete a Tukey's Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load, and how much these predictor variables can explain the response variable, annual nitrogen load. While the p-value tells us that annual nitrogen load differs among different nitrogen sources, it doesn't tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source. The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey's HSD will tell us which specific sources are different from eachother. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This woudl add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.
 
 #### c. Suggestions for rewriting (20 points)
 
@@ -63,15 +41,13 @@ Note that your co-worker didn't include any information about the test statistic
 
 > We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year^-1^) (p = 0.03).
 
-We found a statistically significant correlation between distance from headwater(km) and annual total nitrogen load(kg year^-1^) (Pearson’s r = correlation coefficient, p = 0.03, α = significance level\]), suggesting that nitrogen load changes with distance downstream.
+We found a (strong/weak/positive/negative-Here insert the effect size)(Pearson’s r = correlation coefficient) relationship between distance from headwater(km) and annual total nitrogen load(kg year^-1^) ( p = 0.03, α = significance level), where distance from headwater(km) significatly predicted annual nitrogen load nitrogen load(kg year^-1^).
 
 In part 2 of the results section of the report, your co-worker has written:
 
 > We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
 
--should I include the size differences
-
-We found that there is a difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, \$\alpha = significance level).
+We found that there is a (Insert effect size) difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, \$\alpha = significance level).
 
 ## Problem 2. Data visualization (36 points)
 
@@ -79,7 +55,7 @@ We found that there is a difference between average nitrogen load (kg year^-1^) 
 
 ### Problem
 
-```{r}
+```{r set up}
 #Set up Chunk 
 #Read in Packages 
 library(tidyverse)   # Includes ggplot2, dplyr, readr, tibble, etc.
@@ -99,6 +75,7 @@ library(scales) # modifying axis labels
 library(ggeffects) # getting model predictions
 library(MuMIn) # model selection
 library(gtsummary)
+library(DHARMa)
 
 sst <- read_csv(here("Data", "SST_update2023.csv"))
 nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data 
@@ -109,7 +86,7 @@ nest_boxes <- read_csv(here("Data", "occdist.csv")) #read in my data
 
 Create an object called `sst_clean` from `sst`. Clean and summarize the data such that you end up with a data frame like this:
 
-```{r}
+```{r clean data}
 sst_clean <- sst |> 
   clean_names() |> 
     mutate(
@@ -135,7 +112,7 @@ str(sst_clean) #display sst_clean data structure
 
 Recreate this visualization:
 
-```{r}
+```{r Visualization}
 
 ggplot(sst_clean, aes(x = month, y = mean_monthly_sst, color = year, group = year)) + # Begin ggplot with data and aesthetics mapping
 geom_line(size = 1) + # Adds lines to show monthly trends for each water year
@@ -203,7 +180,7 @@ Stuck on how to create a table? See workshop 8 for an example.
 
 Your table should have 4 columns: (1) model number, (2) season, (3) distance to forest edge, and (4) model description.
 
-```{r}
+```{r CLean and Process Data}
 #| echo: false
 #| results: "hide"
 #| message: false
@@ -211,8 +188,11 @@ Your table should have 4 columns: (1) model number, (2) season, (3) distance to 
 
 nest_boxes_clean <- nest_boxes |> 
   clean_names() |> 
-  filter(box_occupant %in% c("common starling", "swift parrot", "tree martin")) |>  
-mutate(season = as_factor(season))
+mutate(season = as_factor(season)) 
+#delete objects in environment and rerun all my code 
+
+gtsummary:: tbl_regression(model1, 
+                           exponentiate = TRUE)
  
 ```
 
@@ -227,7 +207,7 @@ mutate(season = as_factor(season))
 
 #### e. Run the models (8 points)
 
-```{r}
+```{r Running GLM}
 
 # model 0: null model
 model0 <- glm(
@@ -265,18 +245,7 @@ Check your diagnostics for all models using simulated residuals from the `DHARMa
 
 Display the diagnostic plots for each model.
 
-```{r}
-
-
-
-plot(model0)
-plot(model1)
-plot(model2)
-plot(model3)
-
-```
-
-```{r}
+```{r Diagnostics}
 
 # Set up the 2x2 plot grid before plotting
 par(mfrow = c(2, 2))
@@ -284,8 +253,8 @@ par(mfrow = c(2, 2))
 # Plot DHARMa residual diagnostics for each model
 Model0 <- plot(simulateResiduals(model0))
 Model1 <- plot(simulateResiduals(model1))
-Model3 <- plot(simulateResiduals(model2))
-Model4 <- plot(simulateResiduals(model3))
+Model2 <- plot(simulateResiduals(model2))
+Model3 <- plot(simulateResiduals(model3))
 
 ```
 
@@ -297,7 +266,7 @@ In text, write what the best model was (i.e. "The best model as determined by Ak
 
 **Use the predictors and the response variable to describe the model**, not the model number that you assigned.
 
-```{r model-selection}
+```{r AIC}
 AICc(model1,
      model2,
      model3,
@@ -306,77 +275,82 @@ AICc(model1,
   arrange(AICc)
 ```
 
-```{r model-summary}
-summary(model1)
-# reference level for water_treatment: Drought stressed
-# reference level for species: Lotus scoparius
-gtsummary::tbl_regression(model1, exponentiate = TRUE)
-```
-
-The best model that predicts Swift Parrot nest box occupancy is Model 1 as determined by Akaike's Information Criterion (AIC), which includes both season and distance from forest edge as predictors and has the lowest AIC (F(215.53, 212) = 27.08, p < 0.05, $\alpha$ = 0.05).
+The best model that predicts Swift Parrot nest box occupancy, as determined by Akaike's Information Criterion (AIC), is the model which includes both season and distance from forest edge as predictors and has the lowest AIC (F(215.53, 212) = 27.08, p \< 0.05, $\alpha$ = 0.05).
 
 #### h. Visualize the model predictions (24 points)
+
 ```{r}
+# Generate model predictions
+model_prediction <- ggpredict(model1, terms = c("edge_distance [all]", "season"))|> 
+rename(season = group)
 
-model_prediction <- ggpredict(model1, 
-                          terms = c( "edge_distance [all]", "season"))
 
-ggplot(model_prediction, 
-       aes(x = x, y = predicted, color = group, fill = group)) + 
-         geom_point(size = 2, 
-                    alpha= 0.4,
-                    color = "black") + 
-         geom_ribbon(data = model_prediction, 
-                     aes(x = x, 
-                         y = predicted, 
-                         ymin = conf.low, 
-                         ymax = conf.high), 
-                    alpha = 0.05) + 
-         geom_line(data = model_prediction,
-                   aes(x = x, 
-                       y = predicted)) + 
-         scale_y_continuous(limits = c(0, 1), 
-                            breaks = c(0, 1)) + 
-  theme_minimal(base_size = 14) + #changing themes
-theme(
-panel.background = element_blank(),
-panel.grid = element_blank(), #no grid
+# Make sure 'sp' is numeric
+nest_boxes_clean <- nest_boxes_clean |>
+  mutate(sp = as.numeric(as.character(sp)))
+
+# Final plot
+ggplot(nest_boxes_clean, 
+       aes(x = edge_distance, y = sp, color = season)) +
+  
+  # Raw data points
+  geom_point(size = 2, alpha = 0.4) +
+
+  # Prediction ribbon
+  geom_ribbon(data = model_prediction, 
+              aes(x = x, y = predicted, ymin = conf.low, ymax = conf.high, fill = season),
+              alpha = 0.15, inherit.aes = FALSE) +
+  
+  # Prediction line
+  geom_line(data = model_prediction,
+            aes(x = x, y = predicted, color = season),
+            size = 1.2, inherit.aes = FALSE) +
+
+  # Axis and scales
+  scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.5, 1)) +
+  scale_fill_manual(values = c("2016" = "orange", "2019" = "green")) +
+  scale_color_manual(values = c("2016" = "orange", "2019" = "green")) +
+
+  # Theme
+  theme_minimal(base_size = 14) +
+  theme(
+    panel.background = element_blank(),
+    panel.grid = element_blank(),
     axis.ticks = element_line(color = "black"),
     axis.line = element_line(color = "black"),
-    legend.position = c(0.9, 0.6)) +
-  
-scale_fill_manual(values = c("2016" = "orange",
-                             "2019" = "green")) +
+    legend.position = c(0.9, 0.6)
+  ) +
 
-scale_color_manual(values = c("2016" = "orange",
-                             "2019" = "green")) +
-  
-labs(
-  title = " Probability of Swift Parrot Occupation of Nest Boxes according to Season and Distance",
-  x = "Distance to forest edge (m)",
-  y = "Probability of box occupancy (%)")
-
+  # Labels
+  labs(
+    title = "Probability of Swift Parrot Occupation of Nest Boxes",
+    x = "Distance to forest edge (m)",
+    y = "Probability of box occupancy(%)"
+  )
 
 ```
-
-
 
 #### i. Write a caption for your figure. (7 points)
 
-Include a figure number, title, description of the figure, and data citation.
-
-***Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season*** Data collected by the Australian National University and from the "occdist.csv" package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor "distance to forest edge(m)"(n= 232). The ribbons represent the 95% confidence intervals around model 1's predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon. 
+***Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season*** Data collected by the Australian National University and from the "occdist.csv" package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor "distance to forest edge(m)"(n= 232). The ribbons represent the 95% confidence intervals around model 1's predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.
 
 #### j. Calculate model predictions (4 points)
 
 Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in `season`.
 
 Show and annotate all code. Display the output.
-```{r}
+
+```{r CAlculating Predictions}
+#calculating the predicted probaility at 0m 
+#Untiltimedtly 4 different predictions -can come out combined 
+ggpredict(model1, 
+          terms = c("edge_distance [0, 900]", "season [2016]")) 
+
+ggpredict(model1, 
+          terms = c("edge_distance [0, 900]", "season [2019]")) 
 
 
 ```
-
 
 #### k. Interpret your results (16 points)
 
@@ -386,17 +360,21 @@ Write 3-5 sentences summarizing what you found, making references to the figure 
 -   the relationship between distance from forest edge and probability of occupancy
 -   the biology behind the trends you found - what explains the relationship between distance from forest edge and probability of Swift Parrot nest box occupancy?
 
+Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge( ).
+
+If the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0, 64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 24\].
+
+If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\].
+
+For every 1m increase in distance from forest edge in 2016, the odds of a Swift parrot occupying a nest box decreases by a factor of
+
+we see the Tree martins have an opposite relationship
+
 ::: {.callout-note title="READ THE PAPER!" collapse="true"}
 To understand the biology behind the trends you found, you need to read the paper and look at the figures. For which species do you see the *opposite* relationship between distance to forest edge and probability of occupancy?
 :::
 
 ## Problem 4. Affective and exploratory visualizations (45 points)
-
-### Skills you will demonstrate
-
-In this problem, you will demonstrate your ability to **communicate about your visualization and give feedback to others.** You will also demonstrate your ability to **design and execute an appropriate statistical analysis for your data**.
-
-### Problem 4
 
 #### a. Comparing visualizations (20 points)
 
@@ -417,7 +395,3 @@ With only four observations at the time of HW-2, my visualization lacked a lot o
 -   What kinds of feedback did you get during week 9 in workshop or from the instructors? How did you implement or try those suggestions? If you tried and kept those suggestions, explain how and why; if not, explain why not.
 
 Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my "Number of dishes used" variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefullt provide even more context to my future audience.
-
-#### b. Sharing your affective visualization (25 points)
-
-This is a component you will complete in workshop during week 10. **We will be taking attendance that day. If you attend class and complete the activity, you will receive full credit for this section.**
