@@ -45,15 +45,15 @@ nest_boxes <- read_csv(here("Data", "occdist.csv"))
 
 ## Problem 1. Research writing (36 points)
 
-### Problem
-
 #### a. Transparent statistical methods (8 points)
 
-In part 1, my co-worker used a Pearson's Correlation (r) Test, to measure the linear relationship between distance to head water(km) and annual total nitrogen load(kg year-1) In part 2, they used a one-way ANOVA, to test whether the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands.
+In part 1, my co-worker used a Pearson's Correlation (r) Test, to measure the linear relationship between distance to head water(km) and annual total nitrogen load(kg year⁻¹) In part 2, they used a one-way ANOVA, to test whether the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands.
 
 #### b. More information needed (8 points)
 
-My coworker should include the effect size and complete a Tukey's Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load, and how much these predictor variables can explain the response variable, annual nitrogen load. While the p-value tells us that annual nitrogen load differs among different nitrogen sources, it doesn't tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source. The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey's HSD will tell us which specific sources are different from eachother. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This woudl add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.
+My coworker should include the effect size and complete a Tukey's Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn't tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source.
+
+The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey's HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.
 
 #### c. Suggestions for rewriting (20 points)
 
@@ -61,19 +61,15 @@ In part 1 of the results, your coworker has written:
 
 > We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year^-1^) (p = 0.03).
 
-We found a (strong/weak/positive/negative-Here insert the effect size)(Pearson’s r = correlation coefficient) relationship between distance from headwater(km) and annual total nitrogen load(kg year^-1^) ( p = 0.03, α = significance level), where distance from headwater(km) significatly predicted annual nitrogen load nitrogen load(kg year^-1^).
+We found a (strong/weak/positive/negative-Here insert the effect size)(Pearson’s r = correlation coefficient) relationship between distance from headwater(km) and annual total nitrogen load(kg year⁻¹) ( p = 0.03, α = significance level), where distance from headwater(km) significantly predicted annual nitrogen load nitrogen load(kg year^-1^).
 
 In part 2 of the results section of the report, your co-worker has written:
 
 > We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
 
-We found that there is a (Insert effect size) difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, \$\alpha = significance level).
+We found that there is a (Insert effect size) difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).
 
 ## Problem 2. Data visualization (36 points)
-
-### Skills you will demonstrate
-
-### Problem
 
 #### a. Cleaning and summarizing (16 points)
 
@@ -141,12 +137,8 @@ legend.background = element_blank() #gets rid of backround box for legend
 
 ## Problem 3. Data analysis (87 points)
 
-### Skills you will demonstrate
-
 1.  How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (*Lathamus discolor*) nest box occupancy?
 2.  Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?
-
-### Problem
 
 #### a. Response variable (2 points)
 
