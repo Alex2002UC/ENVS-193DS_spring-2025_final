@@ -169,7 +169,7 @@ mutate(season = as_factor(season)) #make season a factor
 ```
 
 | Model Number | Season | Distance to forest edge | Model Description |
-|------------------|------------------|------------------|-------------------|
+|----|----|----|----|
 | 0 |  |  | no predictors( null model) |
 | 1 | X | X | Year + Distance(saturated model) |
 | 2 | X |  | Year |
@@ -292,6 +292,7 @@ ggplot(nest_boxes_clean,
     x = "Distance to forest edge (m)",
     y = "Probability of box occupancy(%)"
   )
+
 
 ```
 
