@@ -43,7 +43,6 @@ nest_boxes <- read_csv(here("Data", "occdist.csv"))
 
 ```
 
-
 ## Problem 1. Research writing (36 points)
 
 ### Problem
@@ -147,7 +146,6 @@ legend.background = element_blank() #gets rid of backround box for legend
 1.  How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (*Lathamus discolor*) nest box occupancy?
 2.  Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?
 
-
 ### Problem
 
 #### a. Response variable (2 points)
@@ -160,13 +158,11 @@ Swift Parrots are an native species of birds that are endangered due to deforest
 
 #### c. Difference in "seasons" (2 points)
 
-
 The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.
 
 #### d. Table of models (10 points)
 
 Make a table of all the models you will need to run. You will run 4 models: a null model, a saturated model, and two other models with different combinations of predictors.
-
 
 ```{r CLean and Process Data}
 #| echo: false
@@ -185,7 +181,7 @@ mutate(season = as_factor(season)) #make season a factor
 | 0 |  |  | no predictors( null model) |
 | 1 | X | X | Year + Distance(saturated model) |
 | 2 | X |  | Year |
-| 3 |  | X | Distance from edge |
+| 3 |  | X | Distance from forest edge(m) |
 
 : Table of Models
 
@@ -224,8 +220,6 @@ model3 <- glm(
 ```
 
 #### f. Check the diagnostics (6 points)
-
-
 
 ```{r Diagnostics}
 
@@ -317,7 +311,6 @@ ggplot(nest_boxes_clean,
 
 Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in `season`.
 
-
 ```{r CAlculating Predictions}
 
 ggpredict(model1, 
@@ -331,16 +324,13 @@ ggpredict(model1,
 
 #### k. Interpret your results (16 points)
 
-Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j. 
+Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j.
 
-Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H).
-According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0.33, .64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 0.24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases. 
-
+Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0.33, .64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 0.24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases.
 
 ## Problem 4. Affective and exploratory visualizations (45 points)
 
 #### a. Comparing visualizations (20 points)
-
 
 -   How are the visualizations different from each other in the way you have represented your data?
 
