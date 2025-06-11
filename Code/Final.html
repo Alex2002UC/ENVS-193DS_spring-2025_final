@@ -70,35 +70,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="Final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Final_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -113,30 +84,16 @@ window.Quarto = {
   <li><a href="#link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" id="toc-link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" class="nav-link active" data-scroll-target="#link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final">link to Github repo:https://github.com/Alex2002UC/ENVS-193DS_spring-2025_final</a></li>
   <li><a href="#problem-1.-research-writing-36-points" id="toc-problem-1.-research-writing-36-points" class="nav-link" data-scroll-target="#problem-1.-research-writing-36-points">Problem 1. Research writing (36 points)</a>
   <ul>
-  <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem">Problem</a>
-  <ul>
   <li><a href="#a.-transparent-statistical-methods-8-points" id="toc-a.-transparent-statistical-methods-8-points" class="nav-link" data-scroll-target="#a.-transparent-statistical-methods-8-points">a. Transparent statistical methods (8 points)</a></li>
   <li><a href="#b.-more-information-needed-8-points" id="toc-b.-more-information-needed-8-points" class="nav-link" data-scroll-target="#b.-more-information-needed-8-points">b. More information needed (8 points)</a></li>
-  </ul></li>
-  <li><a href="#only-for-onw-way-anovaaaa" id="toc-only-for-onw-way-anovaaaa" class="nav-link" data-scroll-target="#only-for-onw-way-anovaaaa">ONLY for onw way ANOVAAAA</a></li>
-  </ul></li>
-  <li><a href="#maybe" id="toc-maybe" class="nav-link" data-scroll-target="#maybe">Maybe:</a>
-  <ul>
   <li><a href="#c.-suggestions-for-rewriting-20-points" id="toc-c.-suggestions-for-rewriting-20-points" class="nav-link" data-scroll-target="#c.-suggestions-for-rewriting-20-points">c.&nbsp;Suggestions for rewriting (20 points)</a></li>
   </ul></li>
   <li><a href="#problem-2.-data-visualization-36-points" id="toc-problem-2.-data-visualization-36-points" class="nav-link" data-scroll-target="#problem-2.-data-visualization-36-points">Problem 2. Data visualization (36 points)</a>
   <ul>
-  <li><a href="#skills-you-will-demonstrate" id="toc-skills-you-will-demonstrate" class="nav-link" data-scroll-target="#skills-you-will-demonstrate">Skills you will demonstrate</a></li>
-  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem</a>
-  <ul>
   <li><a href="#a.-cleaning-and-summarizing-16-points" id="toc-a.-cleaning-and-summarizing-16-points" class="nav-link" data-scroll-target="#a.-cleaning-and-summarizing-16-points">a. Cleaning and summarizing (16 points)</a></li>
   <li><a href="#b.-visualize-the-data-20-points" id="toc-b.-visualize-the-data-20-points" class="nav-link" data-scroll-target="#b.-visualize-the-data-20-points">b. Visualize the data (20 points)</a></li>
   </ul></li>
-  </ul></li>
   <li><a href="#problem-3.-data-analysis-87-points" id="toc-problem-3.-data-analysis-87-points" class="nav-link" data-scroll-target="#problem-3.-data-analysis-87-points">Problem 3. Data analysis (87 points)</a>
-  <ul>
-  <li><a href="#skills-you-will-demonstrate-1" id="toc-skills-you-will-demonstrate-1" class="nav-link" data-scroll-target="#skills-you-will-demonstrate-1">Skills you will demonstrate</a></li>
-  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem</a>
   <ul>
   <li><a href="#a.-response-variable-2-points" id="toc-a.-response-variable-2-points" class="nav-link" data-scroll-target="#a.-response-variable-2-points">a. Response variable (2 points)</a></li>
   <li><a href="#b.-purpose-of-study-2-points" id="toc-b.-purpose-of-study-2-points" class="nav-link" data-scroll-target="#b.-purpose-of-study-2-points">b. Purpose of study (2 points)</a></li>
@@ -150,14 +107,9 @@ window.Quarto = {
   <li><a href="#j.-calculate-model-predictions-4-points" id="toc-j.-calculate-model-predictions-4-points" class="nav-link" data-scroll-target="#j.-calculate-model-predictions-4-points">j. Calculate model predictions (4 points)</a></li>
   <li><a href="#k.-interpret-your-results-16-points" id="toc-k.-interpret-your-results-16-points" class="nav-link" data-scroll-target="#k.-interpret-your-results-16-points">k. Interpret your results (16 points)</a></li>
   </ul></li>
-  </ul></li>
   <li><a href="#problem-4.-affective-and-exploratory-visualizations-45-points" id="toc-problem-4.-affective-and-exploratory-visualizations-45-points" class="nav-link" data-scroll-target="#problem-4.-affective-and-exploratory-visualizations-45-points">Problem 4. Affective and exploratory visualizations (45 points)</a>
   <ul>
-  <li><a href="#skills-you-will-demonstrate-2" id="toc-skills-you-will-demonstrate-2" class="nav-link" data-scroll-target="#skills-you-will-demonstrate-2">Skills you will demonstrate</a></li>
-  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a>
-  <ul>
   <li><a href="#a.-comparing-visualizations-20-points" id="toc-a.-comparing-visualizations-20-points" class="nav-link" data-scroll-target="#a.-comparing-visualizations-20-points">a. Comparing visualizations (20 points)</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -197,101 +149,77 @@ window.Quarto = {
 
 <section id="link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final" class="level3">
 <h3 class="anchored" data-anchor-id="link-to-github-repohttpsgithub.comalex2002ucenvs-193ds_spring-2025_final">link to Github repo:https://github.com/Alex2002UC/ENVS-193DS_spring-2025_final</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#reading in necessary packages </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)   <span class="co"># general use </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)        <span class="co"># For getting into file paths </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)      <span class="co"># For reading in Excel files</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)     <span class="co"># For cleaning column names and tabulating-clean_names()</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)   <span class="co">#For tables</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)   </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co">#for plots </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects) </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MuMIn) </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>sst <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"SST_update2023.csv"</span>)) <span class="co">#Read in datasets </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>nest_boxes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"occdist.csv"</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="problem-1.-research-writing-36-points" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1.-research-writing-36-points">Problem 1. Research writing (36 points)</h2>
-<section id="problem" class="level3">
-<h3 class="anchored" data-anchor-id="problem">Problem</h3>
 <section id="a.-transparent-statistical-methods-8-points" class="level4">
 <h4 class="anchored" data-anchor-id="a.-transparent-statistical-methods-8-points">a. Transparent statistical methods (8 points)</h4>
-<p>What statistical tests did your co-worker use? Clearly connect the test to the part that you are addressing (e.g.&nbsp;“In part 1, they used _______. In part 2, they used _______.”).</p>
-<p>In part 1, my co-worker used a Pearson’s r Correlation Test, to measure the linear relationship between distance to head water(km) and annual total nitrogen load(kg year-1) In part 2, they used a one-way ANOVA, to test whether the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands.</p>
+<p>In part 1, my co-worker used a Pearson’s Correlation (r) Test, to measure the linear relationship between distance to head water(km) and annual total nitrogen load(kg year⁻¹) In part 2, they used a one-way ANOVA, to test whether the mean nitrogen load would change among different sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands.</p>
 </section>
 <section id="b.-more-information-needed-8-points" class="level4">
 <h4 class="anchored" data-anchor-id="b.-more-information-needed-8-points">b. More information needed (8 points)</h4>
-<p>My coworker should include the outcomes of both the Leven’s test and the Shapiro-Wilk normality test. In this case, a one-way ANOVA was used to test whether average nitrogen load (kg year⁻¹) differs between sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. However, ANOVA relies on two key assumptions: normality of residuals and homogeneity of variances.</p>
+<p>My coworker should include the effect size and complete a Tukey’s Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn’t tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source.</p>
+<p>The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey’s HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.</p>
 </section>
-</section>
-<section id="only-for-onw-way-anovaaaa" class="level3">
-<h3 class="anchored" data-anchor-id="only-for-onw-way-anovaaaa">ONLY for onw way ANOVAAAA</h3>
-<p>-f-statistic, signifigance level, post hoc test, effect size</p>
-<p>The Shapiro-Wilk normality test should be used to check whether the residuals from the model are approximately normally distributed. This is crucial because the validity of the ANOVA results depends on this assumption. We would ideally want all of our source varaibles to have a test statistic near 1, as that would mean the samples do fit the standarized normal. However, say that the resulting test-staitsic from the Shapiro-Wilk normality test was W=0.7 for fertilizer, then this would indicate that the residuals are not normally distribted, and that a one-way Anova may not be appropriatate to test the null hypothesis.</p>
-<p>To confirm that there is homogeniety across the variances of urban land, atmospheric deposition, fertilizer, waste water treatment, and grasslands. Levene’s test compares the variance of nitrogen load(kg year⁻¹) among the different sources. If the output of the test is p &lt; 0.05, we would reject the null hypothesis that there is equal varaiances between groups, however we wouldn’t know which group comaparison doesn’t have equal variance. The outcome could determine if we need more tests, or if a one-way ANOVA would not be appropraite and a different test needs to be used.</p>
-<p>These two additional statistics would confirm whether the one-way ANOVA was appropriate and whether the results can be trusted.</p>
-</section>
-</section>
-<section id="maybe" class="level2">
-<h2 class="anchored" data-anchor-id="maybe">Maybe:</h2>
-<p>-f-statistic and effect size Post-hoc pairwise comparisons (e.g., Tukey’s HSD) – Since the ANOVA only indicates that at least one group differs, follow-up tests are needed to identify which specific sources (e.g., fertilizer vs.&nbsp;urban land) have significantly different nitrogen loads.</p>
-<p>Effect size (e.g., η² or Cohen’s f) – The p-value only tells us that a difference exists, but not how large the difference is. Reporting effect size would help quantify the practical significance of the variation in nitrogen load across sources.</p>
 <section id="c.-suggestions-for-rewriting-20-points" class="level4">
 <h4 class="anchored" data-anchor-id="c.-suggestions-for-rewriting-20-points">c.&nbsp;Suggestions for rewriting (20 points)</h4>
-<p>In 1-3 sentences, <em>write new research statements</em> to include relevant components from parts a-b and a full test summary in parentheses to be transparent about the statistical method.</p>
-<p>Be sure that your rewritten statements clearly delineate the <em>biological narrative</em> from the <em>statistical summary</em>. See lecture and workshop for examples of writing.</p>
-<p>Note that your co-worker didn’t include any information about the test statistic, distribution, etc., and that you only know the p-value. For any part that you do not know, list that part with text. For example, you could write something like: “… <strong>r = correlation coefficient</strong>, p = 0.03, <span class="math inline">\(\alpha\)</span> = significance level …”</p>
+<p>In part 1 of the results, your coworker has written:</p>
 <blockquote class="blockquote">
 <p>We rejected the null hypothesis that there is no correlation between distance from headwater (km) and annual total nitrogen load (kg year<sup>-1</sup>) (p = 0.03).</p>
 </blockquote>
-<p>We found a statistically significant correlation between distance from headwater(km) and annual total nitrogen load(kg year<sup>-1</sup>) (Pearson’s r = correlation coefficient, p = 0.03, α = significance level]), suggesting that nitrogen load changes with distance downstream.</p>
+<p>We found a (strong/weak/positive/negative-Here insert the effect size)(Pearson’s r = correlation coefficient) relationship between distance from headwater(km) and annual total nitrogen load(kg year⁻¹) ( p = 0.03, α = significance level), where distance from headwater(km) significantly predicted annual nitrogen load nitrogen load(kg year<sup>-1</sup>).</p>
 <p>In part 2 of the results section of the report, your co-worker has written:</p>
 <blockquote class="blockquote">
 <p>We rejected the null hypothesis that there is no difference in average nitrogen load (kg year<sup>-1</sup>) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).</p>
 </blockquote>
-<p>-should I include the size differences</p>
-<p>We found that there(INSERT SIZE OF effect size here) is a difference between average nitrogen load (kg year<sup>-1</sup>) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, $= significance level).</p>
+<p>We found that there is a (Insert effect size) difference between average nitrogen load (kg year<sup>-1</sup>) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).</p>
 </section>
 </section>
 <section id="problem-2.-data-visualization-36-points" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2.-data-visualization-36-points">Problem 2. Data visualization (36 points)</h2>
-<section id="skills-you-will-demonstrate" class="level3">
-<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate">Skills you will demonstrate</h3>
-</section>
-<section id="problem-1" class="level3">
-<h3 class="anchored" data-anchor-id="problem-1">Problem</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Set up Chunk </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in Packages </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)   <span class="co"># Includes ggplot2, dplyr, readr, tibble, etc.</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)        <span class="co"># For reproducible file paths</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Data import &amp; cleaning</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)      <span class="co"># For reading Excel files</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)     <span class="co"># For cleaning column names and tabulating</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Table formatting</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)   <span class="co"># For flexible, styled tables</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)   </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) <span class="co"># modifying axis labels</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects) <span class="co"># getting model predictions</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MuMIn) <span class="co"># model selection</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>sst <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"SST_update2023.csv"</span>))</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>nest_boxes <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"Data"</span>, <span class="st">"occdist.csv"</span>)) <span class="co">#read in my data </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <section id="a.-cleaning-and-summarizing-16-points" class="level4">
 <h4 class="anchored" data-anchor-id="a.-cleaning-and-summarizing-16-points">a. Cleaning and summarizing (16 points)</h4>
 <p>Create an object called <code>sst_clean</code> from <code>sst</code>. Clean and summarize the data such that you end up with a data frame like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sst_clean <span class="ot">&lt;-</span> sst <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">ymd</span>(date),             </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">year</span>(date),            </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> <span class="co">#standarizes column names </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>( </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">ymd</span>(date),     <span class="co">#changing date column to date format          </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">year</span>(date),    <span class="co">#takes year values from date column         </span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">month</span>(date)) <span class="sc">|&gt;</span> <span class="co">#takes month values from date</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="fu">c</span>(<span class="st">"2018"</span>, <span class="st">"2019"</span>, <span class="st">"2020"</span>, <span class="st">"2021"</span>, <span class="st">"2022"</span>, <span class="st">"2023"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(year, month, temp) <span class="sc">|&gt;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(year, month) <span class="sc">|&gt;</span> </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_monthly_sst =</span> <span class="fu">round</span>((<span class="fu">mean</span>(temp, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="dv">1</span>)) <span class="sc">|&gt;</span>  </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="fu">c</span>(<span class="st">"2018"</span>, <span class="st">"2019"</span>, <span class="st">"2020"</span>, <span class="st">"2021"</span>, <span class="st">"2022"</span>, <span class="st">"2023"</span>)) <span class="sc">|&gt;</span> <span class="co">#filtering for only these yeaes</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(year, month, temp) <span class="sc">|&gt;</span> <span class="co">#selecting only these columns </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(year, month) <span class="sc">|&gt;</span> <span class="co">#grouping by year and month</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_monthly_sst =</span> <span class="fu">round</span>((<span class="fu">mean</span>(temp, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="dv">1</span>)) <span class="sc">|&gt;</span>  <span class="co">#calculating mean temp per year and month group, also roudning to the first decimal point</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.factor</span>(year)) <span class="sc">|&gt;</span> <span class="co">#set year column as a factor</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">factor</span>(month.abb[month], <span class="co">#set the month column to factor using the abbreviated month names</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">factor</span>(month.abb[month], <span class="co">#set the month column to factor </span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> month.abb, <span class="co">#the levels of the ordinal factor are set my the month abbreviations</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                           <span class="at">ordered =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                           <span class="at">ordered =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> <span class="co">#months are an ordered factor </span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() </span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_sample</span>(sst_clean, <span class="at">n =</span> <span class="dv">5</span>)  <span class="co">#display 5 random rows from sst_clean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -299,11 +227,11 @@ window.Quarto = {
 <pre><code># A tibble: 5 × 3
   year  month mean_monthly_sst
   &lt;fct&gt; &lt;ord&gt;            &lt;dbl&gt;
-1 2018  Nov               17.9
-2 2019  May               14.3
-3 2019  Jan               14.7
-4 2023  Aug               18.5
-5 2023  Dec               16.2</code></pre>
+1 2021  May               14.4
+2 2021  Nov               15.8
+3 2019  Feb               14.1
+4 2018  May               13.6
+5 2020  Jun               15.9</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sst_clean) <span class="co">#display sst_clean data structure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -318,32 +246,35 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="b.-visualize-the-data-20-points">b. Visualize the data (20 points)</h4>
 <p>Recreate this visualization:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sst_clean, <span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> mean_monthly_sst, <span class="at">color =</span> year, <span class="at">group =</span> year)) <span class="sc">+</span> <span class="co"># Begin ggplot with data and aesthetics mapping</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="co"># Adds lines to show monthly trends for each water year</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># Add points to represent individual data values for each month</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"Month"</span>, <span class="co">#deterines x-axis name</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Mean Monthly Sea Surface temperature (°C)"</span>, <span class="co">#y-axis name</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">color =</span> <span class="st">"Year"</span>) <span class="sc">+</span> <span class="co">#differentiates each water year by a different color</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2018"</span> <span class="ot">=</span> <span class="st">"#c6dbef"</span>,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"#9ecae1"</span>,</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2020"</span> <span class="ot">=</span> <span class="st">"#6baed6"</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2021"</span> <span class="ot">=</span> <span class="st">"#4292c6"</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2022"</span> <span class="ot">=</span> <span class="st">"#2171b5"</span>,</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2023"</span> <span class="ot">=</span> <span class="st">"#084594"</span>)) <span class="sc">+</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing themes</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#no grid</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.7</span>),</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="at">legend.background =</span> <span class="fu">element_blank</span>() <span class="co">#no legend</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sst_clean, <span class="fu">aes</span>(<span class="at">x =</span> month, <span class="co">#setting up x axis as month</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> mean_monthly_sst, <span class="co">#plotting mean temperature per month on y-axis</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">color =</span> year, <span class="co">#different colors for each year</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">group =</span> year)) <span class="sc">+</span> <span class="co">#tells the plot to draw lines by connecting the dots for each year</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="co"># Adds lines to show monthly trends for each water year</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># Add points to represent underlying data</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"Month"</span>, <span class="co">#x-axis name</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Mean Monthly Sea Surface temperature (°C)"</span>, <span class="co">#y-axis name</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">color =</span> <span class="st">"Year"</span>) <span class="sc">+</span> <span class="co">#differentiates each water year by a different color</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>( <span class="co">#manually assighning colors to each year)</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>( </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2018"</span> <span class="ot">=</span> <span class="st">"#c6dbef"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"#9ecae1"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2020"</span> <span class="ot">=</span> <span class="st">"#6baed6"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2021"</span> <span class="ot">=</span> <span class="st">"#4292c6"</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2022"</span> <span class="ot">=</span> <span class="st">"#2171b5"</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"2023"</span> <span class="ot">=</span> <span class="st">"#084594"</span>)) <span class="sc">+</span> <span class="co">#made a blue color gradient </span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing theme from default </span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>( </span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">panel.background =</span> <span class="fu">element_blank</span>(), <span class="co">#gets rid of backround panels </span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#no grid</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>), <span class="co">#adds axis ticks </span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>), <span class="co">#makes axis lines black </span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.7</span>), <span class="co">#posiitons legend inside graph</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="at">legend.background =</span> <span class="fu">element_blank</span>() <span class="co">#gets rid of backround box for legend </span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -354,47 +285,29 @@ window.Quarto = {
 </div>
 </section>
 </section>
-</section>
 <section id="problem-3.-data-analysis-87-points" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3.-data-analysis-87-points">Problem 3. Data analysis (87 points)</h2>
-<section id="skills-you-will-demonstrate-1" class="level3">
-<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate-1">Skills you will demonstrate</h3>
 <ol type="1">
 <li>How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (<em>Lathamus discolor</em>) nest box occupancy?</li>
 <li>Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?</li>
 </ol>
-<p><strong>READ THE INTRODUCTION AND METHODS BEFORE YOU START.</strong></p>
-</section>
-<section id="problem-2" class="level3">
-<h3 class="anchored" data-anchor-id="problem-2">Problem</h3>
 <section id="a.-response-variable-2-points" class="level4">
 <h4 class="anchored" data-anchor-id="a.-response-variable-2-points">a. Response variable (2 points)</h4>
-<p>In 1-2 sentences, explain what the 1s and 0s mean in this data set biologically.</p>
-<p>The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row.</p>
+<p>The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whichever species is labelled in that row as box_occupant.</p>
 </section>
 <section id="b.-purpose-of-study-2-points" class="level4">
 <h4 class="anchored" data-anchor-id="b.-purpose-of-study-2-points">b. Purpose of study (2 points)</h4>
-<p>The authors compare nest box occupancy between 3 species: Swift Parrots, Common Starlings, and Tree Martins. In 1-2 sentences, explain the main difference between Swift Parrots and the other two species in the context of this study.</p>
 <p>Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.</p>
 </section>
 <section id="c.-difference-in-seasons-2-points" class="level4">
 <h4 class="anchored" data-anchor-id="c.-difference-in-seasons-2-points">c.&nbsp;Difference in “seasons” (2 points)</h4>
-<p>The authors compare two years (that they refer to as “seasons”). In 1-2 sentences, define what those years/seasons are, and explain how they differ in the context of this study.</p>
 <p>The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.</p>
 </section>
 <section id="d.-table-of-models-10-points" class="level4">
 <h4 class="anchored" data-anchor-id="d.-table-of-models-10-points">d.&nbsp;Table of models (10 points)</h4>
 <p>Make a table of all the models you will need to run. You will run 4 models: a null model, a saturated model, and two other models with different combinations of predictors.</p>
-<p>Stuck on how to create a table? See workshop 8 for an example.</p>
-<p>Your table should have 4 columns: (1) model number, (2) season, (3) distance to forest edge, and (4) model description.</p>
 <table class="caption-top table">
 <caption>Table of Models</caption>
-<colgroup>
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 26%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Model Number</th>
@@ -426,7 +339,7 @@ window.Quarto = {
 <td>3</td>
 <td></td>
 <td>X</td>
-<td>Distance from edge</td>
+<td>Distance from forest edge(m)</td>
 </tr>
 </tbody>
 </table>
@@ -438,41 +351,38 @@ window.Quarto = {
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>model0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  sp <span class="sc">~</span> <span class="dv">1</span>, <span class="co"># formula</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> nest_boxes_clean, <span class="co"># data frame</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>() <span class="co">#binary response variable</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># model 1: all predictors</span></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  sp <span class="sc">~</span> season <span class="sc">+</span> edge_distance, <span class="co"># formula</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> nest_boxes_clean, <span class="co"># data frame</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>()</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>() <span class="co">#binary response variable</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># model 2: SLA and water treatment</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># model 2: season as a predictor</span></span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  sp <span class="sc">~</span> season,</span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> nest_boxes_clean,</span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>()</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># model 3: SLA and species</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># model 3: Distance from forest edge as a predictor </span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  sp <span class="sc">~</span> edge_distance,</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> nest_boxes_clean,</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>()</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">binomial</span>() <span class="co">#binary response variable</span></span>
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="f.-check-the-diagnostics-6-points" class="level4">
 <h4 class="anchored" data-anchor-id="f.-check-the-diagnostics-6-points">f.&nbsp;Check the diagnostics (6 points)</h4>
-<p>Check your diagnostics for all models using simulated residuals from the <code>DHARMa</code> package.</p>
-<p>Display the diagnostic plots for each model.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the 2x2 plot grid before plotting</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot DHARMa residual diagnostics for each model</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Model0 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model0))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>)) <span class="co"># Set up the 2x2 plot grid before plotting</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot DHARMa residual diagnostics for each model</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Model0 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model0)) <span class="co">#for null model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -480,7 +390,7 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Model1 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model1)) <span class="co">#for saturated model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -488,7 +398,7 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Model2 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model2)) <span class="co">#for season predictor </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -496,7 +406,7 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Model3 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Model3 <span class="ot">&lt;-</span> <span class="fu">plot</span>(<span class="fu">simulateResiduals</span>(model3)) <span class="co"># for distance from forest edge predictor </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -508,16 +418,12 @@ window.Quarto = {
 </section>
 <section id="g.-select-the-best-model-6-points" class="level4">
 <h4 class="anchored" data-anchor-id="g.-select-the-best-model-6-points">g. Select the best model (6 points)</h4>
-<p>Using Akaike’s Information Criterion (AIC) from the <code>MuMIn</code> package, choose the best model.</p>
-<p>In text, write what the best model was (i.e.&nbsp;“The best model as determined by Akaike’s Information Criterion (AIC)…”).</p>
-<p><strong>Use the predictors and the response variable to describe the model</strong>, not the model number that you assigned.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">AICc</span>(model1,</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     model2,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>     model3,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>     model0) <span class="sc">|&gt;</span> </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># arranging output in descending order of AIC</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(AICc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>     model0) <span class="sc">|&gt;</span>  <span class="co">#calculating AIC for all four models to dtermine best fit </span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(AICc) <span class="co">#setting outputs in ascvending order, to show lowest one first </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       df     AICc
 model1  3 226.3133
@@ -526,58 +432,63 @@ model2  2 236.3744
 model0  1 238.8318</code></pre>
 </div>
 </div>
-<p>The best model that predicts Swift Parrot nest box occupancy is Model 1 as determined by Akaike’s Information Criterion (AIC), which includes both season and distance from forest edge as predictors and has the lowest AIC (F(215.53, 212) = 27.08, p &lt; 0.05, <span class="math inline">\(\alpha\)</span> = 0.05).</p>
+<p>The best model that predicts Swift Parrot nest box occupancy, as determined by Akaike’s Information Criterion (AIC), is the model which includes both season and distance from forest edge as predictors and has the lowest AIC of 226.3133.</p>
 </section>
 <section id="h.-visualize-the-model-predictions-24-points" class="level4">
 <h4 class="anchored" data-anchor-id="h.-visualize-the-model-predictions-24-points">h. Visualize the model predictions (24 points)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate model predictions</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>model_prediction <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model1, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [all]"</span>, <span class="st">"season"</span>))<span class="sc">|&gt;</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">season =</span> group)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>model_prediction <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model1, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [all]"</span>, <span class="st">"season"</span>))<span class="sc">|&gt;</span> <span class="co"># Generate model predictions based on edge_distance and season</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">season =</span> group) <span class="co">#renaming season as group so I can use it for the other graphs </span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure 'sp' is numeric</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>nest_boxes_clean <span class="ot">&lt;-</span> nest_boxes_clean <span class="sc">|&gt;</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sp =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(sp)))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>nest_boxes_clean <span class="ot">&lt;-</span> nest_boxes_clean <span class="sc">|&gt;</span> </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sp =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(sp))) <span class="co">#makes sp numeric </span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Final plot</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nest_boxes_clean, </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> edge_distance, <span class="at">y =</span> sp, <span class="at">color =</span> season)) <span class="sc">+</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Raw data points</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Prediction ribbon</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> model_prediction, </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted, <span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high, <span class="at">fill =</span> season),</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Prediction line</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model_prediction,</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted, <span class="at">color =</span> season),</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">1.2</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Axis and scales</span></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span></span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Theme</span></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span></span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.6</span>)</span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Labels</span></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Probability of Swift Parrot Occupation of Nest Boxes"</span>,</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Distance to forest edge (m)"</span>,</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Probability of box occupancy(%)"</span></span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> edge_distance, <span class="at">y =</span> sp,  <span class="co">#creating plot off nest_boxes_clean dataset, and setting which data is being plotted. </span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> season)) <span class="sc">+</span>  <span class="co">#setting color by season</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="co">#choosing sizes</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> <span class="co">#displaying underlying data </span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> model_prediction, </span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x =</span> x, </span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>                  <span class="at">y =</span> predicted,</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> conf.low, </span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> conf.high, </span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> season), <span class="co">#color the ribbons by year </span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="co">#controls transparency </span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#plotting the 95% CI as ribbons around line </span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model_prediction,  <span class="co"># Prediction line</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted, <span class="at">color =</span> season),</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">1.2</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#making the lines thicker </span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)) <span class="sc">+</span> <span class="co">#Customizing y-axis: setting range 0–1 and tick marks at 0, 0.5, and 1</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manually coloring ribbons by year</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manualy coloring points and lines by year</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing theme to minimal </span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(), <span class="co">#removes gray backround</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#removes grid lines</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.6</span>) <span class="co">#choosing position of legend </span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="co">#customizing the graph </span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(  <span class="co"># Changing labels </span></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Probability of Swift Parrot Occupation of Nest Boxes"</span>,</span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Distance to forest edge (m)"</span>,</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Probability of box occupancy(%)"</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -589,18 +500,14 @@ model0  1 238.8318</code></pre>
 </section>
 <section id="i.-write-a-caption-for-your-figure.-7-points" class="level4">
 <h4 class="anchored" data-anchor-id="i.-write-a-caption-for-your-figure.-7-points">i. Write a caption for your figure. (7 points)</h4>
-<p>Include a figure number, title, description of the figure, and data citation.</p>
 <p><strong><em>Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season</em></strong> Data collected by the Australian National University and from the “occdist.csv” package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor “distance to forest edge(m)”(n= 232). The ribbons represent the 95% confidence intervals around model 1’s predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.</p>
 </section>
 <section id="j.-calculate-model-predictions-4-points" class="level4">
 <h4 class="anchored" data-anchor-id="j.-calculate-model-predictions-4-points">j. Calculate model predictions (4 points)</h4>
 <p>Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in <code>season</code>.</p>
-<p>Show and annotate all code. Display the output.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#calculating the predicted probaility at 0m </span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Untiltimedtly 4 different predictions -can come out combined </span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpredict</span>(model1, </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [0, 900]"</span>, <span class="st">"season [2016]"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpredict</span>(model1, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [0, 900]"</span>, <span class="st">"season [2016]"</span>)) <span class="co">#calculating the predicted probaility at 0m and 900m for 2016</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Predicted probabilities of sp
 
@@ -610,7 +517,7 @@ edge_distance | Predicted |     95% CI
           900 |      0.12 | 0.06, 0.24</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpredict</span>(model1, </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [0, 900]"</span>, <span class="st">"season [2019]"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"edge_distance [0, 900]"</span>, <span class="st">"season [2019]"</span>))  <span class="co">#calculating the predicted probaility at 0m and 900m for 2019</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Predicted probabilities of sp
 
@@ -623,43 +530,14 @@ edge_distance | Predicted |     95% CI
 </section>
 <section id="k.-interpret-your-results-16-points" class="level4">
 <h4 class="anchored" data-anchor-id="k.-interpret-your-results-16-points">k. Interpret your results (16 points)</h4>
-<p>Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j. Your summary should include your interpretation of:</p>
-<ul>
-<li>the predicted probability of occupancy at the forest edge (0 m) and farther away from the forest edge (900 m) between seasons</li>
-<li>the relationship between distance from forest edge and probability of occupancy</li>
-<li>the biology behind the trends you found - what explains the relationship between distance from forest edge and probability of Swift Parrot nest box occupancy?</li>
-</ul>
-<p>Swift Parrots -</p>
-<div class="callout callout-style-default callout-note callout-titled" title="READ THE PAPER!">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-READ THE PAPER!
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>To understand the biology behind the trends you found, you need to read the paper and look at the figures. For which species do you see the <em>opposite</em> relationship between distance to forest edge and probability of occupancy?</p>
-</div>
-</div>
-</div>
-</section>
+<p>Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j.</p>
+<p>Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI [0.33, .64], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI [0.06, 0.24].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI [0.18, 0.44], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI [0.03, 0.13]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases.</p>
 </section>
 </section>
 <section id="problem-4.-affective-and-exploratory-visualizations-45-points" class="level2">
 <h2 class="anchored" data-anchor-id="problem-4.-affective-and-exploratory-visualizations-45-points">Problem 4. Affective and exploratory visualizations (45 points)</h2>
-<section id="skills-you-will-demonstrate-2" class="level3">
-<h3 class="anchored" data-anchor-id="skills-you-will-demonstrate-2">Skills you will demonstrate</h3>
-<p>In this problem, you will demonstrate your ability to <strong>communicate about your visualization and give feedback to others.</strong> You will also demonstrate your ability to <strong>design and execute an appropriate statistical analysis for your data</strong>.</p>
-</section>
-<section id="problem-4" class="level3">
-<h3 class="anchored" data-anchor-id="problem-4">Problem 4</h3>
 <section id="a.-comparing-visualizations-20-points" class="level4">
 <h4 class="anchored" data-anchor-id="a.-comparing-visualizations-20-points">a. Comparing visualizations (20 points)</h4>
-<p>Compare and contrast your affective visualization from Homework 3 and the exploratory visualizations you made for Homework 2. In 1-3 sentences each, explain:</p>
 <ul>
 <li>How are the visualizations different from each other in the way you have represented your data?</li>
 </ul>
@@ -675,8 +553,7 @@ READ THE PAPER!
 <ul>
 <li>What kinds of feedback did you get during week 9 in workshop or from the instructors? How did you implement or try those suggestions? If you tried and kept those suggestions, explain how and why; if not, explain why not.</li>
 </ul>
-<p>Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my “Number of dishes used” variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefullt provide even more context to my future audience.</p>
-</section>
+<p>Professor Bui recommended that I add bowls filled with various levels of water to represent the overall trends in my data, how using certain cooking appliances resulted in more time spent cooking, as well as trying to incoporate my “Number of dishes used” variable. At the time I recieved feedback I was still in my sketching out phase, so I built upon her suggestions by symbolizing my time spent cooking in water bowls, as well as symbolized my number of dirty doshes as differently sized spoons that were next to shelves that each contained different numbers of ingredients. I incorporated her recommendations because they gave me a way to incorporate the outcomes of my data, but also have a scenic visualization, and I added beyond the recommendations so that I could include all my measured variables to hopefully provide even more context to my future audience.</p>
 </section>
 </section>
 
