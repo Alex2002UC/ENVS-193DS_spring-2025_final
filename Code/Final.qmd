@@ -38,7 +38,7 @@ library(MuMIn)
 library(gtsummary)
 library(DHARMa)
 
-sst <- read_csv(here("Data", "SST_update2023.csv")) #Read in datsets 
+sst <- read_csv(here("Data", "SST_update2023.csv")) #Read in datasets 
 nest_boxes <- read_csv(here("Data", "occdist.csv"))  
 
 ```
@@ -147,25 +147,19 @@ legend.background = element_blank() #gets rid of backround box for legend
 1.  How do year (2016 or 2019) and distance from forest edge predict Swift Parrot (*Lathamus discolor*) nest box occupancy?
 2.  Is there a simpler model that explains Swift Parrot nest box occupancy, and if so, what is it?
 
-**READ THE INTRODUCTION AND METHODS BEFORE YOU START.**
 
 ### Problem
 
 #### a. Response variable (2 points)
 
-In 1-2 sentences, explain what the 1s and 0s mean in this data set biologically.
-
-The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whatever species is labelled in that row.
+The 0s in this data mean that a nest box is unoccupied by a certain species: common starling, swift parrot, or tree martin. The 1s in this data mean that a nest box is occupied by whichever species is labelled in that row as box_occupant.
 
 #### b. Purpose of study (2 points)
-
-The authors compare nest box occupancy between 3 species: Swift Parrots, Common Starlings, and Tree Martins. In 1-2 sentences, explain the main difference between Swift Parrots and the other two species in the context of this study.
 
 Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.
 
 #### c. Difference in "seasons" (2 points)
 
-The authors compare two years (that they refer to as "seasons"). In 1-2 sentences, define what those years/seasons are, and explain how they differ in the context of this study.
 
 The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.
 
@@ -173,9 +167,6 @@ The two years that are referred to as breeding seasons in thi study are 2016 and
 
 Make a table of all the models you will need to run. You will run 4 models: a null model, a saturated model, and two other models with different combinations of predictors.
 
-Stuck on how to create a table? See workshop 8 for an example.
-
-Your table should have 4 columns: (1) model number, (2) season, (3) distance to forest edge, and (4) model description.
 
 ```{r CLean and Process Data}
 #| echo: false
@@ -234,9 +225,7 @@ model3 <- glm(
 
 #### f. Check the diagnostics (6 points)
 
-Check your diagnostics for all models using simulated residuals from the `DHARMa` package.
 
-Display the diagnostic plots for each model.
 
 ```{r Diagnostics}
 
@@ -328,7 +317,6 @@ ggplot(nest_boxes_clean,
 
 Calculate the predicted probabilities of Swift Parrot nest box occupancy with 95% at 0 m from forest edge and 900 m from forest edge for each level in `season`.
 
-Show and annotate all code. Display the output.
 
 ```{r CAlculating Predictions}
 
@@ -346,14 +334,13 @@ ggpredict(model1,
 Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j. 
 
 Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H).
-According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0, 64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases. 
+According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0.33, .64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 0.24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases. 
 
 
 ## Problem 4. Affective and exploratory visualizations (45 points)
 
 #### a. Comparing visualizations (20 points)
 
-Compare and contrast your affective visualization from Homework 3 and the exploratory visualizations you made for Homework 2. In 1-3 sentences each, explain:
 
 -   How are the visualizations different from each other in the way you have represented your data?
 
