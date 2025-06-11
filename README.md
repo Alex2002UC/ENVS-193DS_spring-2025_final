@@ -8,6 +8,8 @@ This repository is for the final assighnment in ENVS 193DS. Alex2002UC is the cr
 Data and File Information: 
 
 There are two folders: Data and Code. The Code folder contains all the code in the Final.qmd file. The Data folder contains all the datasets used in this repository. 
+
+```{r}
 .
 ├── Code
 │   ├── Final.html
@@ -48,7 +50,7 @@ There are two folders: Data and Code. The Code folder contains all the code in t
 │   └── occdist.csv
 ├── ENVS-193DS_spring-2025_final.Rproj
 └── README.md
-
+```
 
 
 Rendered Output: 
