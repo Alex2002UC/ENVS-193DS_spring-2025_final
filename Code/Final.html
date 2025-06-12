@@ -182,8 +182,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="b.-more-information-needed-8-points" class="level4">
 <h4 class="anchored" data-anchor-id="b.-more-information-needed-8-points">b. More information needed (8 points)</h4>
-<p>My coworker should include the effect size and complete a Tukey’s Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn’t tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source.</p>
-<p>The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey’s HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.</p>
+<p>My coworker should include the effect size(Eta-squared (η²)) and complete a Tukey’s Honestly significant difference test to add more context and clarity to the results. Including the effect size (Eta-squared (η²)) will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn’t tell us how much of the variation in anual nitrogen load can be explained by the type of nitrogen source.The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads.</p>
+<p>While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey’s HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.</p>
 </section>
 <section id="c.-suggestions-for-rewriting-20-points" class="level4">
 <h4 class="anchored" data-anchor-id="c.-suggestions-for-rewriting-20-points">c.&nbsp;Suggestions for rewriting (20 points)</h4>
@@ -196,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>We rejected the null hypothesis that there is no difference in average nitrogen load (kg year<sup>-1</sup>) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).</p>
 </blockquote>
-<p>We found that there is a (Insert effect size) difference between average nitrogen load (kg year<sup>-1</sup>) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).</p>
+<p>We found that there is a (Insert effect size/large/small)( η²= effect size) difference between average nitrogen load (kg year<sup>-1</sup>) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).</p>
 </section>
 </section>
 <section id="problem-2.-data-visualization-36-points" class="level2">
@@ -227,11 +227,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code># A tibble: 5 × 3
   year  month mean_monthly_sst
   &lt;fct&gt; &lt;ord&gt;            &lt;dbl&gt;
-1 2021  May               14.4
-2 2021  Nov               15.8
-3 2019  Feb               14.1
-4 2018  May               13.6
-5 2020  Jun               15.9</code></pre>
+1 2023  May               14.3
+2 2021  Aug               17.7
+3 2022  Feb               14.1
+4 2018  Feb               14.3
+5 2020  Jan               14.6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sst_clean) <span class="co">#display sst_clean data structure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -297,11 +297,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="b.-purpose-of-study-2-points" class="level4">
 <h4 class="anchored" data-anchor-id="b.-purpose-of-study-2-points">b. Purpose of study (2 points)</h4>
-<p>Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.</p>
+<p>Swift Parrots are an native species of birds that are endangered due to deforestation and competitive species, and are the targets species for nest boxes efforts to increase their numbers. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.</p>
 </section>
 <section id="c.-difference-in-seasons-2-points" class="level4">
 <h4 class="anchored" data-anchor-id="c.-difference-in-seasons-2-points">c.&nbsp;Difference in “seasons” (2 points)</h4>
-<p>The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.</p>
+<p>The two years that are referred to as breeding seasons in this study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused because most Swift Parrots prefer not to reuse nest areas.</p>
 </section>
 <section id="d.-table-of-models-10-points" class="level4">
 <h4 class="anchored" data-anchor-id="d.-table-of-models-10-points">d.&nbsp;Table of models (10 points)</h4>
@@ -442,53 +442,48 @@ model0  1 238.8318</code></pre>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">season =</span> group) <span class="co">#renaming season as group so I can use it for the other graphs </span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>nest_boxes_clean <span class="ot">&lt;-</span> nest_boxes_clean <span class="sc">|&gt;</span> </span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sp =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(sp))) <span class="co">#makes sp numeric </span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nest_boxes_clean, </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> edge_distance, <span class="at">y =</span> sp,  <span class="co">#creating plot off nest_boxes_clean dataset, and setting which data is being plotted. </span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> season)) <span class="sc">+</span>  <span class="co">#setting color by season</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="co">#choosing sizes</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> <span class="co">#displaying underlying data </span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> model_prediction, </span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x =</span> x, </span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>                  <span class="at">y =</span> predicted,</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> conf.low, </span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> conf.high, </span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> season), <span class="co">#color the ribbons by year </span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="co">#controls transparency </span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#plotting the 95% CI as ribbons around line </span></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model_prediction,  <span class="co"># Prediction line</span></span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted, <span class="at">color =</span> season),</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">1.2</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#making the lines thicker </span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nest_boxes_clean, </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> edge_distance, <span class="at">y =</span> sp,  <span class="co">#creating plot off nest_boxes_clean dataset, and setting which data is being plotted. </span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> season)) <span class="sc">+</span>  <span class="co">#setting color by season</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="co">#choosing sizes</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span> <span class="co">#displaying underlying data </span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> model_prediction, </span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x =</span> x, </span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>                  <span class="at">y =</span> predicted,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> conf.low, </span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> conf.high, </span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> season), <span class="co">#color the ribbons by year </span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="co">#controls transparency </span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>              <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#plotting the 95% CI as ribbons around line </span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model_prediction,  <span class="co"># Prediction line</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> predicted, <span class="at">color =</span> season),</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">1.2</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co">#making the lines thicker </span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)) <span class="sc">+</span> <span class="co">#Customizing y-axis: setting range 0–1 and tick marks at 0, 0.5, and 1</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manually coloring ribbons by year</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manualy coloring points and lines by year</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)) <span class="sc">+</span> <span class="co">#Customizing y-axis: setting range 0–1 and tick marks at 0, 0.5, and 1</span></span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manually coloring ribbons by year</span></span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"2016"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"2019"</span> <span class="ot">=</span> <span class="st">"green"</span>)) <span class="sc">+</span> <span class="co">#manualy coloring points and lines by year</span></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing theme to minimal </span></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(), <span class="co">#removes gray backround</span></span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#removes grid lines</span></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.6</span>) <span class="co">#choosing position of legend </span></span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="co">#customizing the graph </span></span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(  <span class="co"># Changing labels </span></span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Probability of Swift Parrot Occupation of Nest Boxes"</span>,</span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Distance to forest edge (m)"</span>,</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Probability of box occupancy(%)"</span></span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> <span class="co">#changing theme to minimal </span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(), <span class="co">#removes gray backround</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(), <span class="co">#removes grid lines</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.6</span>) <span class="co">#choosing position of legend </span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="co">#customizing the graph </span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(  <span class="co"># Changing labels </span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Probability of Swift Parrot Occupation of Nest Boxes"</span>,</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Distance to forest edge (m)"</span>,</span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Probability of box occupancy(%)"</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -500,7 +495,7 @@ model0  1 238.8318</code></pre>
 </section>
 <section id="i.-write-a-caption-for-your-figure.-7-points" class="level4">
 <h4 class="anchored" data-anchor-id="i.-write-a-caption-for-your-figure.-7-points">i. Write a caption for your figure. (7 points)</h4>
-<p><strong><em>Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season</em></strong> Data collected by the Australian National University and from the “occdist.csv” package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor “distance to forest edge(m)”(n= 232). The ribbons represent the 95% confidence intervals around model 1’s predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.</p>
+<p><strong><em>Figure 1: Probability of Swift Parrots occupying nest boxes decreases as distance to forest edge increases.</em></strong> Data collected by the Australian National University and from the “occdist.csv” package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), Link: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the underlying binary data of nest box occupancy by Swift Parrots at different values of the predictor “distance to forest edge(m)”(n= 236). The orange circles represent the observation in 2016(n=104), and the green circles re[resent the observations in 2019(n=123). Additionally, the model predicted values both both 2016 and 2019 are represented by the line plots, orange and green respectidly.The ribbons around the prediction lines represent the 95% confidence intervals around model generated predicted probabilities. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.</p>
 </section>
 <section id="j.-calculate-model-predictions-4-points" class="level4">
 <h4 class="anchored" data-anchor-id="j.-calculate-model-predictions-4-points">j. Calculate model predictions (4 points)</h4>
@@ -531,7 +526,7 @@ edge_distance | Predicted |     95% CI
 <section id="k.-interpret-your-results-16-points" class="level4">
 <h4 class="anchored" data-anchor-id="k.-interpret-your-results-16-points">k. Interpret your results (16 points)</h4>
 <p>Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j.</p>
-<p>Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI [0.33, .64], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI [0.06, 0.24].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI [0.18, 0.44], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI [0.03, 0.13]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases.</p>
+<p>Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge in both 2016 and 2019, but the model predicted a higher probability of occupancy in 2016(Figure 1). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI [0.33, .64], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI [0.06, 0.24].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI [0.18, 0.44], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI [0.03, 0.13]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between the variables, where box occupancy increases as distance from forest edge increases.</p>
 </section>
 </section>
 <section id="problem-4.-affective-and-exploratory-visualizations-45-points" class="level2">

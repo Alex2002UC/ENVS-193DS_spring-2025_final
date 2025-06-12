@@ -51,9 +51,9 @@ In part 1, my co-worker used a Pearson's Correlation (r) Test, to measure the li
 
 #### b. More information needed (8 points)
 
-My coworker should include the effect size and complete a Tukey's Honestly significant difference test to add more context and clarity to the results. Including the effect size will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn't tell us how much of the variation in anuual nitrogen load can be explained by the type of nitrogen source.
+My coworker should include the effect size(Eta-squared (η²)) and complete a Tukey's Honestly significant difference test to add more context and clarity to the results. Including the effect size (Eta-squared (η²)) will determine how large of an effect the nitrogen sources have on annual nitrogen load(kg year⁻¹), and how much these predictor variables can explain the response variable, annual nitrogen load(kg year⁻¹). While the p-value tells us that annual nitrogen load(kg year⁻¹) differs among different nitrogen sources, it doesn't tell us how much of the variation in anual nitrogen load can be explained by the type of nitrogen source.The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads.
 
-The effect size adds context by describing how important the type of nitrogen source is when looking at annual nitrogen loads. While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey's HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.
+While the One-way Anova tells us whether there is a difference between nitrogen sources and annual nitrogen loads, A Tukey's HSD will tell us which specific sources are different from each other. It would identify which nitrogen sources: urban land, atmospheric deposition, fertilizer, waste water treatment, and grassland, hae different nitrogen loads. This would add context by helping people identify which nitrogen sources contribute more, and understand more about the environmental problem as a whole.
 
 #### c. Suggestions for rewriting (20 points)
 
@@ -67,7 +67,7 @@ In part 2 of the results section of the report, your co-worker has written:
 
 > We rejected the null hypothesis that there is no difference in average nitrogen load (kg year^-1^) between sources (urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands) (p = 0.02).
 
-We found that there is a (Insert effect size) difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).
+We found that there is a (Insert effect size/large/small)( η²= effect size) difference between average nitrogen load (kg year^-1^) between sources: urban land, atmospheric deposition, fertilizer, wastewater treatment, and grasslands(one-way ANOVA, F(among groups df, within groups df) = F-statistic, p = 0.02, α = significance level).
 
 ## Problem 2. Data visualization (36 points)
 
@@ -146,11 +146,11 @@ The 0s in this data mean that a nest box is unoccupied by a certain species: com
 
 #### b. Purpose of study (2 points)
 
-Swift Parrots are an native species of birds that are endangered due to deforestation and invasive species. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.
+Swift Parrots are an native species of birds that are endangered due to deforestation and competitive species, and are the targets species for nest boxes efforts to increase their numbers. In comparison, Common Starlings are an abundant introduced species and the Tree Martins are a native species that is not endangered, however, both of these species are nest box competitors for the Swift Parrots.
 
 #### c. Difference in "seasons" (2 points)
 
-The two years that are referred to as breeding seasons in thi study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused.
+The two years that are referred to as breeding seasons in this study are 2016 and 2019. In 2016, the nest boxes were newly deployed and 29 were used by Swift Parrots, in comparison, in 2019, the nest boxes had been around for three years and only 20 were used, with only five nests reused because most Swift Parrots prefer not to reuse nest areas.
 
 #### d. Table of models (10 points)
 
@@ -165,6 +165,11 @@ Make a table of all the models you will need to run. You will run 4 models: a nu
 nest_boxes_clean <- nest_boxes |> #new object
   clean_names() |> #standarized column names 
 mutate(season = as_factor(season)) #make season a factor 
+
+
+nest_boxes_clean <- nest_boxes_clean |> 
+  mutate(sp = as.numeric(as.character(sp))) #makes sp numeric 
+
  
 ```
 
@@ -245,11 +250,6 @@ model_prediction <- ggpredict(model1, terms = c("edge_distance [all]", "season")
 rename(season = group) #renaming season as group so I can use it for the other graphs 
 
 
-
-nest_boxes_clean <- nest_boxes_clean |> 
-  mutate(sp = as.numeric(as.character(sp))) #makes sp numeric 
-
-
 ggplot(nest_boxes_clean, 
        aes(x = edge_distance, y = sp,  #creating plot off nest_boxes_clean dataset, and setting which data is being plotted. 
            color = season)) +  #setting color by season
@@ -298,7 +298,7 @@ ggplot(nest_boxes_clean,
 
 #### i. Write a caption for your figure. (7 points)
 
-***Figure 1: Probability of Swift Parrots occupying nest boxes predicted by distance to forest edge and season*** Data collected by the Australian National University and from the "occdist.csv" package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), DOI: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the predicted probabilities of nest box occupancy at different values of the predictor "distance to forest edge(m)"(n= 232). The ribbons represent the 95% confidence intervals around model 1's predicted probabilities, our points. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.
+***Figure 1: Probability of Swift Parrots occupying nest boxes decreases as distance to forest edge increases.*** Data collected by the Australian National University and from the "occdist.csv" package(Stojanovic, Dejan; Owens, Giselle; etc, 2021), Link: https://datadryad.org/dataset/doi:10.5061/dryad.83bk3j9sb. The points represent the underlying binary data of nest box occupancy by Swift Parrots at different values of the predictor "distance to forest edge(m)"(n= 236). The orange circles represent the observation in 2016(n=104), and the green circles re\[resent the observations in 2019(n=123). Additionally, the model predicted values both both 2016 and 2019 are represented by the line plots, orange and green respectidly.The ribbons around the prediction lines represent the 95% confidence intervals around model generated predicted probabilities. The season for 2016 is represented in the orange ribbon, while the season for 2019 is represented by green ribbon.
 
 #### j. Calculate model predictions (4 points)
 
@@ -319,7 +319,7 @@ ggpredict(model1,
 
 Write 3-5 sentences summarizing what you found, making references to the figure you made in part h and the predictions you calculated in part j.
 
-Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge(Graph in part H). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0.33, .64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 0.24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between teh varaibles, where box occupancy increases as distance from forest edge increases.
+Swift Parrots tend to occupy nest boxes more often when the boxes are located closer to the forest edge in both 2016 and 2019, but the model predicted a higher probability of occupancy in 2016(Figure 1). According the model predictions from part J, if the nest box distance from forest edge(m) is 0m in the season 2016, the probability of a Swift Parrot occupying it is 0.48 (95% CI \[0.33, .64\], and if the distance is 900m , the probability of a Swift Parrot occupying it is 0.12 (95% CI \[0.06, 0.24\].If the nest box distance from forest edge(m) is 0m in the season 2019, the probability of a Swift Parrot occupying it is 0.3 (95% CI \[0.18, 0.44\], and if the distance is 900m, the probability of a Swift Parrot occupying it is 0.06 (95% CI \[0.03, 0.13\]. These results suggest that Swift Parrots prefer to be near forest edges, most likely because of proximity to food and nest resources or great competition from Tree Martins, because the Tree martin has a positive relationship between the variables, where box occupancy increases as distance from forest edge increases.
 
 ## Problem 4. Affective and exploratory visualizations (45 points)
 
